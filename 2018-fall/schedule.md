@@ -2,7 +2,7 @@
 
 | Week  | Date | Topic | Date | Topic |  
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1 | 8/27 | [01 - Introduction](/content.md#01) | 8/29 | [02 - What is IT?](/content.md#02) |
+| 1 | 8/27 | [01 - Introduction](../content.md#01) | 8/29 | [02 - What is IT?](../content.md#02) |
 | 2 | 9/3 | No Classes - Labor Day | 9/5 | [03 - Managing IT](/content.md#03) |
 | 3 | 9/10 | [04 - Networking Fundamentals](/content.md#04) | 9/12 | [05 - OS/Command Line Interfaces](/content.md#05) |
 | 4	| 9/17 | [06 - Virtualization and Containerization](/content.md#06) | 9/19 | [07 – EXAM 1](/content.md#07) | 

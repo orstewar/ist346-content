@@ -3,7 +3,7 @@
 ## Fall 2018 Term
 
 - [Syllabus](2018-fall/syllabus.pdf)
-- [Schedule of Topics](2018-fall/topics.md)
+- [Schedule of Topics](2018-fall/schedule.md)
 
 ## Course Materials
 
