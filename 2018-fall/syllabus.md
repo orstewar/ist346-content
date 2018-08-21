@@ -14,7 +14,7 @@ This course introduces the student to computer hardware and operating systems; c
 
 ## Course Learning Outcomes
 
-- Discuss the strategic role that technology plays in today&#39;s competitive business environment.
+- Discuss the strategic role that technology plays in today's competitive business environment.
 - Understand the role that IT plays in improving business processes by helping organizations cut costs and become more competitive.
 - Survey several technologies and assess the implications of implementing them to solve business problems in an enterprise environment.
 - Evaluate information technology services through the lenses of: support, management, cost, security, value, and functionality.
@@ -126,4 +126,4 @@ Please consult Blackboard for Reading list, Labs, and Homework which is due each
 | 12 | 11/12 | 19 – AIP: Web and APIs | 11/14 | 20 – AIP: Mobile Services |
 | 13 | 11/19 | _No Classes – Thanksgiving Break_ | 11/21 | _No Classes – Thanksgiving Break_ |
 | 14 | 11/26 | 21 – AIP: Internet of Things | 11/28 | 22 – Information Ethics |
-| 15 | 12/3 | Group Project Presentations | 12/5 | **EXAM 4 (Covers all topics in course)** |
+| 15 | 12/3 | **Group Project Presentations** | 12/5 | **EXAM 4 (Covers all topics in course)** |
