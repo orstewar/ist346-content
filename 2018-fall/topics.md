@@ -1,11 +1,11 @@
-# Topics
+# Topics Schedule Fall 2018
 
 | Week  | Date | Topic | Date | Topic |  
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1 | 8/27 | [01 - Introduction](01.md) | 8/29 | [02 - What is IT?](02.md) |
-| 2 | 9/3 | No Classes - Labor Day | 9/5 | [03 - Managing IT](03.md) |
-| 3 | 9/10 | [04 - Networking Fundamentals](04.md) | 9/12 | [05 - OS/Command Line Interfaces](05.md) |
-| 4	| 9/17 | 06 - [Virtualization and Containerization](06.md) | 9/19 | [07 – EXAM 1](07.md) | 
+| 1 | 8/27 | [01 - Introduction](/content/index.md#01) | 8/29 | [02 - What is IT?](/content/index.md#02) |
+| 2 | 9/3 | No Classes - Labor Day | 9/5 | [03 - Managing IT](/content/index.md#03) |
+| 3 | 9/10 | [04 - Networking Fundamentals](/content/index.md#04) | 9/12 | [05 - OS/Command Line Interfaces](/content/index.md#05) |
+| 4	| 9/17 | 06 - [Virtualization and Containerization](/content/index.md#06) | 9/19 | [07 – EXAM 1](/content/index.md#07) | 
 | 5	| 9/24 | 08 - Workstations and Clients | 9/26 | 09 – Servers and Data Centers | 
 | 6	| 10/1 | 10 – Services: Application Architectures | 10/3 | 11 – Services: Scalability | 
 | 7	| 10/8 | 12 – Services: Monitoring and Logging | 10/10 | 13 – EXAM 2 | 

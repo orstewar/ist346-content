@@ -1,0 +1,95 @@
+# Course Materials
+
+# 01
+## Introduction
+
+Class Materials
+
+- [Slides](content/01-introduction-to-course.pptx)
+
+To-Do For Next Class
+
+- Read / Review the Syllabus
+- Buy the Textbook, TPOSANA 
+- Read TPOSANA Preface
+
+# 02
+## What is IT?
+
+Class Materials
+
+- [Slides](content/02-what-is-it.pptx)
+
+To-Do For Next Class
+
+- Read: TPOSANA Ch 1,2,35
+- Read: TCO, Investopedia [http://www.webcitation.org/70HzNwXIH](http://www.webcitation.org/70HzNwXIH)
+- Read: ROI, Investopedia [http://www.webcitation.org/70Hze3GPy](http://www.webcitation.org/70Hze3GPy) 
+
+
+# 03 
+## Managing IT
+
+Class Materials
+
+- [Slides](03-managing-it.pptx)
+
+To-Do For Next Class
+
+- Homework: ROI/TCO exercises
+- Homework: Lab 00 - Understanding the Lab Environment
+- Read: Learn Networking Basics, Commotion [http://www.webcitation.org/70I0LNJde](http://www.webcitation.org/70I0LNJde)
+- Watch: How the Internet Works, code.org [https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+
+# 04 
+## Networking Fundamentals
+
+Class Materials
+
+- [Slides](04-networking-fundamentals.pptx)
+
+To-Do For Next Class
+
+- Homework: ROI/TCO exercises
+- Homework: Lab 01 - Networking Fundamentals
+- Read: [Operating Systems Architecture](./content/reading-05-operating-systems-architecture.pdf)
+- Watch: How Computers Work, Code.org [https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-](https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-)
+- Watch: Learn the Linux Command Line (Just Chapters 1,2,3), Lynda.com [https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html](https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html) 
+
+
+# 05 
+## OS/Command Line Interfaces
+
+Class Materials
+
+- [Slides](05-os-command-line-interfaces.pptx)
+
+To-Do For Next Class
+
+- Homework: Lab 02 - Command Line 
+			Follow this: http://www.webcitation.org/71YOChFro https://www.learnenough.com/command-line-tutorialAs the lab, but use the linux environment setup for class
+- Read: TPOSANA Ch 3,4 
+- Read: [Virtualization and Containerization](./content/reading-06-virtualization-containerization.pdf)
+
+
+# 06 
+## Virtualization and Containerization
+
+Class Materials
+
+- [Slides](06-virtualization-and-containerization.pptx)
+
+To-Do For Next Class
+
+- Study for Exam 1
+
+# 07 
+## Exam 1
+
+Class Materials 
+
+- None
+
+To-Do For Next Class
+
+- Some reading TBD
