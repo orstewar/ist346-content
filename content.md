@@ -37,7 +37,7 @@ Class Materials
 To-Do For Next Class
 
 - Homework: ROI/TCO exercises
-- Homework: Lab 00 - Understanding the Lab Environment
+- Homework: [Lab 00 - Understanding the Lab Environment](labs/00.md)
 - Read: Learn Networking Basics, Commotion [http://www.webcitation.org/70I0LNJde](http://www.webcitation.org/70I0LNJde)
 - Watch: How the Internet Works, code.org [https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
@@ -51,7 +51,7 @@ Class Materials
 To-Do For Next Class
 
 - Homework: ROI/TCO exercises
-- Homework: Lab 01 - Networking Fundamentals
+- Homework: [Lab 01 - Networking Fundamentals](labs/01.md)
 - Read: [Operating Systems Architecture](/content/reading-05-operating-systems-architecture.pdf)
 - Watch: How Computers Work, Code.org [https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-](https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-)
 - Watch: Learn the Linux Command Line (Just Chapters 1,2,3), Lynda.com [https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html](https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html) 
@@ -66,8 +66,7 @@ Class Materials
 
 To-Do For Next Class
 
-- Homework: Lab 02 - Command Line 
-			Follow this: http://www.webcitation.org/71YOChFro https://www.learnenough.com/command-line-tutorialAs the lab, but use the linux environment setup for class
+- Homework: [Lab 02 - Command Line linux](labs/02.md) 
 - Read: TPOSANA Ch 3,4 
 - Read: [Virtualization and Containerization](/content/reading-06-virtualization-containerization.pdf)
 
@@ -92,4 +91,4 @@ Class Materials
 
 To-Do For Next Class
 
-- Some reading TBD
+- Homework: [Lab 03 - Virtualization and Containers](labs/03.md)
