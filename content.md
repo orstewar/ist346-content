@@ -83,12 +83,13 @@ To-Do For Next Class
 - Study for Exam 1
 
 # 07 
-## Exam 1
+## Workstations and Clients
 
 Class Materials 
 
-- None
+- Slides TBD
 
 To-Do For Next Class
 
 - Homework: [Lab 03 - Virtualization and Containers](labs/03.md)
+- 

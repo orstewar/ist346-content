@@ -8,8 +8,7 @@ Term: Fall 2018 Section: M004
 | **Office Hours:** | M/W 11am-1:30pm | **Course Site:** | [http://blackboard.syracuse.edu](http://blackboard.syracuse.edu) |
 | **Meeting Times:** | M/W 2:15pm-3:35pm | **Meeting Place** | Hinds Hall 021 |
 
-##
-Course Description
+## Course Description
 
 This course introduces the student to computer hardware and operating systems; client/server OS operations and administration for secure computing; business applications, and analysis of alternative systems hardware and OS platforms.
 
@@ -23,8 +22,7 @@ This course introduces the student to computer hardware and operating systems; c
 ## Course Materials
 
 - Required Text: &quot;The Practice of System and Network Administration, 3rd
- Edition&quot;
-ISBN 0-321-91916-8
+ Edition&quot; ISBN 0-321-91916-8
 - Supplemental course materials are provided for this course.
 - This course has a laboratory component. You will be required to use the computer labs to complete coursework.
 
@@ -56,12 +54,9 @@ ISBN 0-321-91916-8
 
 | **Type** | **Quantity** | **Points** | **Total** | **Notes** |
 | --- | --- | --- | --- | --- |
-|
-1. Participation (P)  | 20 | 1 | 20 | Measured every class. |
-|
-2. Exams (EX)  | 4 (3 best) | 20 | 60 | 4 Total. 3 Best Count. |
-|
-3. IT Research Project (IT)  | 1 | 20 | 20 |   |
+| 1. Participation (P)  | 20 | 1 | 20 | Measured every class. |
+| 2. Exams (EX)  | 4 (3 best) | 20 | 60 | 4 Total. 3 Best Count. |
+| 3. IT Research Project (IT)  | 1 | 20 | 20 |   |
 | **Total Points** |   |   | **100** |   |
 
 ## Grading Scale
