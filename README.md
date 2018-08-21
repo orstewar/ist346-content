@@ -7,5 +7,5 @@
 
 ## Course Materials
 
-- [Content](content/index.md) (Includes Slides, Readings / To-Do Lists)
-- [Labs](labs/index.md)
+- [Content](content.md) (Includes Slides, Readings / To-Do Lists)
+- [Labs](labs.md)
