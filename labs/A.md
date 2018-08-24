@@ -133,7 +133,7 @@ Let's take it for a spin:
 1. For this lab, the environment is just a simple Linux computer. To bring up the lab environment, type: `docker-compose up -d`
 1. The **first time** you do this it's gonna take a bit. It needs to download the image files from the internet and set them up. When its done, you should see a green **done** in the output.
 1. Let's see what's running: `docker-compose ps`. In the output you'll see the name `lab-a_ubuntu_1`. `ubnutu` is the name of the container and the `1` tells you there is one running instance of it. 
-1. We can connect to the container like this: `docker-compose exec ubuntu bash` 
+1. We can connect to the container by typing this command: `docker-compose exec ubuntu bash` 
 1. This will bring up the Linux Bash prompt `root@ubuntu:/#` , indicating that you are now no longer in PowerShell land, but at the command prompt of your running Linux container!!!
 1. Okay that's enough of that. Type `exit` to quit the Linux container and return to the PowerShell prompt.
 1.  When you type `docker-compose ps` notice the environment is still running. It will remain running until we tear it down. 
@@ -141,15 +141,15 @@ Let's take it for a spin:
 
 IMPORTANT: You should always tear down the environment when you are finished to make sure that you free up resources! If you keep unused containers running your Windows VM will slow down, as there's only a finite number of resources on the host!
 
+Practice these steps. You will be doing these often in future labs.
+
 ## Questions 
 
-1. What is a virtual machine?
-2. What is a command line interface?
-3. Define "Command Prompt"
+1. What is a virtual machine? What is a container? How are they different?
+2. What is a command line interface? Command Prompt?
 1. Typically how many times to you need to clone a git repository?
 2. What command to your type to update the contents of your git repository?
 3. What is the command to change the working directory to the git repository?
-4. What is a container?
 5. What command do you type to bring up the environment for the lab?
 6. What command do you type to shut down the environment for a lab?
 7. Why is it important to tear down the lab environment when you are done?
