@@ -47,7 +47,7 @@ To-Do For Next Class
 
 Class Materials
 
-- [Slides](/content/05-os-command-line-interfaces.pptx)
+- [Slides](/content/04-os-command-line-interfaces.pptx)
 
 To-Do For Next Class
 
@@ -62,7 +62,7 @@ To-Do For Next Class
 
 Class Materials
 
-- [Slides](/content/04-networking-fundamentals.pptx)
+- [Slides](/content/05-networking-fundamentals.pptx)
 
 To-Do For Next Class
 
