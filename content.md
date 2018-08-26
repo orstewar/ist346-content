@@ -38,25 +38,11 @@ To-Do For Next Class
 
 - Homework: ROI/TCO exercises
 - Homework: [Lab A - Understanding the Lab Environment](labs/A.md)
-- Read: Learn Networking Basics, Commotion [http://www.webcitation.org/70I0LNJde](http://www.webcitation.org/70I0LNJde)
-- Watch: How the Internet Works, code.org [https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
-
-# 04 
-## Networking Fundamentals
-
-Class Materials
-
-- [Slides](/content/04-networking-fundamentals.pptx)
-
-To-Do For Next Class
-
-- Homework: ROI/TCO exercises
-- Homework: [Lab B - Networking Fundamentals](labs/B.md)
 - Read: [Operating Systems Architecture](/content/reading-05-operating-systems-architecture.pdf)
 - Watch: How Computers Work, Code.org [https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-](https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-)
-- Watch: Learn the Linux Command Line (Just Chapters 1,2,3), Lynda.com [https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html](https://www.lynda.com/Linux-tutorials/Learning-Linux-Command-Line/435539-2.html) 
 
-# 05 
+
+# 04 
 ## OS/Command Line Interfaces
 
 Class Materials
@@ -65,7 +51,22 @@ Class Materials
 
 To-Do For Next Class
 
-- Homework: [Lab C - Command Line linux](labs/C.md) 
+- Homework: [Lab B - Command Line linux](labs/C.md) 
+- Read: Learn Networking Basics, Commotion [http://www.webcitation.org/70I0LNJde](http://www.webcitation.org/70I0LNJde)
+- Watch: How the Internet Works, code.org [https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+- OPTIONAL: Deep Dive into Linux commands: https://www.learnenough.com/command-line-tutorial
+
+
+# 05 
+## Networking Fundamentals
+
+Class Materials
+
+- [Slides](/content/04-networking-fundamentals.pptx)
+
+To-Do For Next Class
+
+- Homework: [Lab B - Networking Fundamentals](labs/B.md)
 - Read: TPOSANA Ch 3,4 
 - Read: [Virtualization and Containerization](/content/reading-06-virtualization-containerization.pdf)
 
