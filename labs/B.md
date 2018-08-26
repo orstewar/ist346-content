@@ -106,4 +106,4 @@ will start the container back up again restoring it to the original state.
 1. What is a link? What are the two types of links?
 1. Write the linux command to move a file named `a.txt` in the `Documents` folder into the `Desktop` folder. Note: Assume both folders are the same parent directory.
 1. Write the linux command to list files in a folder two folder up from the current working directory.
-1. Write the linux command to find the files that begin with the letter `t` in the `/bin` folder. 
+1. Write the linux command to find the files that begin with the letter `t` in the `/bin` folder.
