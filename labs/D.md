@@ -28,8 +28,10 @@ Since this lab uses, Docker the setup will be a little different.  We need to re
 7. Get the `ubnutu` image from Docker Hub:
 `PS ist346-labs\lab-D> docker pull ubuntu`
 8. Set the environment variable used in the video. Paste this command into your PowerShell window:
-`$FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\n
-CREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Names}}\n"`
+```
+$FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\n
+CREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Names}}\n"
+```
 
 ### Log in to Lynda.com with your Syracuse University Account ###
 
@@ -64,6 +66,18 @@ Important Tips:
 - When you need to open additional windows, like in the video, type `start powershell` from the PowerShell command prompt to open powershell in another window.
 - At one point you will need to know the IP Address of the computer running docker. In PowerShell you can get this with `ipconfig`  unlike the `ifconfig` command the author uses in the Linux video.
 
+## Tear-Down the Lab Environment ##
+
+To tear down this lab environment when you are finished:
+
+5. Stop all running containers:  
+`PS ist346-labs\lab-D> docker kill $(docker ps -q)`
+5. Delete all stopped containers:  
+`PS ist346-labs\lab-D> docker rm $(docker ps -a -q)`
+6. Delete all images:  
+`PS ist346-labs\lab-D> docker rmi $(docker images -q)`
+
+
 ## Questions ##
 
 1. What is the difference between an image and a container?
@@ -76,5 +90,3 @@ Important Tips:
 8. `docker run -p 1000:2000 ubuntu my-program` Which port is available to the host? Which port does this application run on? 
 9. What are the two types of docker volumes?
 10. What are the two ways you can network containers in docker?
-
-
