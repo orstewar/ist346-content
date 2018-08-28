@@ -66,7 +66,7 @@ Class Materials
 
 To-Do For Next Class
 
-- Homework: [Lab B - Networking Fundamentals](labs/B.md)
+- Homework: [Lab C - Networking Fundamentals](labs/C.md)
 - Read: TPOSANA Ch 3,4 
 - Read: [Virtualization and Containerization](/content/reading-06-virtualization-containerization.pdf)
 
@@ -79,7 +79,9 @@ Class Materials
 
 To-Do For Next Class
 
-- Study for Exam 1
+- Homework: [Lab D - Virtualization and Containers](labs/03.md)
+- Read: TPOSANA Ch ?? ??
+
 
 # 07 
 ## Workstations and Clients
@@ -90,5 +92,16 @@ Class Materials
 
 To-Do For Next Class
 
-- Homework: [Lab 03 - Virtualization and Containers](labs/03.md)
-- 
+- Study for Exam 1
+
+#08 
+### Exam 1
+
+Class Materials 
+
+- None
+
+To-Do For Next Class
+
+- Read: TPOSANA Ch ?? ??
+
