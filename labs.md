@@ -6,4 +6,4 @@
 - [D - Virtual Machines and Containers](labs/D.md)
 - [E - Workstations and clients](labs/E.md)
 - F - Services and Servers
-- Scalability
+- G - 
