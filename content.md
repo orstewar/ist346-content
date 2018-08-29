@@ -5,7 +5,7 @@
 
 Class Materials
 
-- [Slides](/content/01-introduction-to-course.pptx)
+- [Slides](content/01-introduction-to-course.pptx)
 
 # 02
 ## What is IT?
@@ -18,7 +18,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](/content/02-what-is-it.pptx)
+- [Slides](content/02-what-is-it.pptx)
 
 # 03 
 ## Managing IT
@@ -32,7 +32,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](/content/03-managing-it.pptx)
+- [Slides](content/03-managing-it.pptx)
 
 # 04 
 ## OS/Command Line Interfaces
@@ -47,7 +47,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](/content/04-os-command-line-interfaces.pptx)
+- [Slides](content/04-os-command-line-interfaces.pptx)
 
 # 05 
 ## Networking Fundamentals
@@ -60,7 +60,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](/content/05-networking-fundamentals.pptx)
+- [Slides](content/05-networking-fundamentals.pptx)
 
 # 06 
 ## Virtualization and Containerization
@@ -73,7 +73,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](/content/06-virtualization-and-containerization.pptx)
+- [Slides](content/06-virtualization-and-containerization.pptx)
 
 # 07 
 ## Workstations and Clients
@@ -81,12 +81,12 @@ Class Materials
 To-Do List
 
 - Read: TPOSANA Ch 5,6,7
-- 
+- Read: [Workstations](/content/reading-07-workstations.pdf)
+- Homework: [Lab E - Workstations and Clients](labs/E.md)
 
 Class Materials
 
-- Slides TBD
-
+- [Slides](content/07-workstations-and-clients.pptx) 
 
 #08 
 ### Exam 1
