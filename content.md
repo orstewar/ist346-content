@@ -42,7 +42,7 @@ To-Do List
 - Homework: [ROI/TCO exercises](labs/roi-tco.md)
 - Watch: How Computers Work, Code.org [https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-](https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-) Watch all 6 videos in the series.
 - Read: [Operating Systems Architecture](/content/reading-04-operating-systems-architecture.pdf)
-- Homework: [Lab B - Command Line linux](labs/C.md) 
+- Homework: [Lab B - Command Line linux](labs/B.md) 
 - OPTIONAL: Deep Dive into Linux commands: https://www.learnenough.com/command-line-tutorial
 
 Class Materials
@@ -69,7 +69,7 @@ To-Do List
 
 - Read: TPOSANA Ch 3,4 
 - Read: [Virtualization and Containerization](/content/reading-06-virtualization-containerization.pdf)
-- Homework: [Lab D - Virtualization and Containers](labs/03.md)
+- Homework: [Lab D - Virtualization and Containers](labs/D.md)
 
 Class Materials
 
@@ -80,7 +80,8 @@ Class Materials
 
 To-Do List
 
-- Read: TPOSANA Ch ?? ??
+- Read: TPOSANA Ch 5,6,7
+- 
 
 Class Materials
 
