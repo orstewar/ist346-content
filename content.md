@@ -88,7 +88,7 @@ Class Materials
 
 - [Slides](content/07-workstations-and-clients.pptx) 
 
-#08 
+# 08 
 ### Exam 1
 
 To-Do List

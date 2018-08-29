@@ -4,7 +4,7 @@
 
 In this lab you will:
 
-- Learn learn basic networking commands for PowerShell and Linux
+- Learn basic networking commands for PowerShell and Linux
 - Understand the basics of how the Docker network environment works.
 - Learn the basics of the linux command line. 
 
@@ -131,7 +131,7 @@ https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
 `root@workstation:/#`   
 Indicating that you are no longer in PowerShell but inside your workstation linux container.
 1. Let's check the ip address of the workstation, type:  
-`ifconfig`   
+`root@workstation:/# ifconfig`   
 Notice that on linux it is `ifconfig` not `ipconfig`. Also the interface it called `eth0`. Make a note of the IP Address of your workstation.
 
 ### Scanning for ports
