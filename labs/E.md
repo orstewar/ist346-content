@@ -4,7 +4,7 @@
 
 In this lab you will:
 
-- Learn howi to install and configure software on a Ubuntu linux system with `apt`  
+- Learn how to install and configure software on a Ubuntu linux system with `apt`  
 - Learn how to automate tasks to multiple computers using `Ansible` as part of systems management. 
 
 ### Lab Setup At A Glance
@@ -123,10 +123,10 @@ To help you fully understand the power and flexibility of Ansible we will preten
 - workstations 1-3 are in the `it` department
 - workstations 4-5 are in the `sales` department
 
-We can configure this through ansible's `hosts` file located at `/etc/ansible/hosts`, let's do this now:
+We can configure this through Ansible's `hosts` file located at `/etc/ansible/hosts`, let's do this now:
 
 1. First we need to accesss the Linux console of the `server`, type:  
-`PS ist346-labs\lab-E> docker-compose exec server bash` 
+`PS ist346-labs\lab-E> docker-compose exec server bash`  
 1. You should now see the familar Linux Bash prompt: `root@server:/#` from this prompt, let's edit the Ansible hosts file:  
 `root@server:/# nano /etc/ansible/hosts`
 1. This will bring up the file in the `nano` text editor. Add the following lines to the bottom of the file:
@@ -139,7 +139,7 @@ lab-e_workstation_[1:3]
 lab-e_workstation_[4:5]
 ```
 
-when you are finished editing the file press `CTRL` + `x` and when asked to save modified buffer press `y`, and press `ENTER` to keep the name file name.
+When you are finished editing the file press `CTRL` + `x` and when asked to save modified buffer press `y`, and press `ENTER` to keep the name file name.
 
 ### Testing our setup
 
