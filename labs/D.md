@@ -37,8 +37,7 @@ CREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Name
 
 1. Nagivate your web browser to https://lynda.syr.edu 
 2. This will prompt you with a Syracuse University login screen. Login with your Syracuse University **NetID** and **Password**. 
-3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html
-?org=syracuse.edu 
+3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu) 
 
 The entire course is about 3 hours long. We will only complete part 2 which should take you about 60 minutes.
 
@@ -51,7 +50,7 @@ NOTE: You'll probably want to use a pair of headphones so you can listen to the 
 ### What is Docker? ###
 
 Start by watching the following video: What is docker?
-https://www.lynda.com/Docker-tutorials/What-Docker/721901/779036-4.html?org=syracuse.edu 
+[https://www.lynda.com/Docker-tutorials/What-Docker/721901/779036-4.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/What-Docker/721901/779036-4.html?org=syracuse.edu) 
 
 ## Docker Commands ##
 

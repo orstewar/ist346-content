@@ -121,7 +121,7 @@ As we said before just because a host responds to a ping it does not necessairly
 The applications which run on these servers communicate over a port. The port consists of a number between 0 and 65535 and a protocol of either TCP or UDP. Common services we use everyday such as HTTP are setup to run over the same port. This ensures consistency from and makes it easer for clients to consume the service. 
 
 A list of the well-known ports can be found here: 
-https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 
 ### Getting started
 

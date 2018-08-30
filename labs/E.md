@@ -130,6 +130,7 @@ We can configure this through ansible's `hosts` file located at `/etc/ansible/ho
 1. You should now see the familar Linux Bash prompt: `root@server:/#` from this prompt, let's edit the Ansible hosts file:  
 `root@server:/# nano /etc/ansible/hosts`
 1. This will bring up the file in the `nano` text editor. Add the following lines to the bottom of the file:
+
 ```
 [it]
 lab-e_workstation_[1:3]
@@ -198,6 +199,7 @@ For example let's assume we need to run a Ruby program on all the computers in t
 
 Our playbook would look something like this:
 
+
 ```
 - hosts: it
   tasks:
@@ -227,6 +229,7 @@ The playbook file output should be similar to code you see above.
 1. Let's execute the playbook!  
 `root@server:/# ansible-playbook -k ruby.yml`   
 The playbook output look something like this:  
+
 ```
 PLAY [it] **********************************************
 

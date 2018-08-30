@@ -49,7 +49,7 @@ All Syracuse University students have accounts on Lynda.com, a leading technolog
 
 1. Nagivate your web browser to https://lynda.syr.edu 
 2. This will prompt you with a Syracuse University login screen. Login with your Syracuse University **NetID** and **Password**. 
-3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu 
+3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu](https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu) 
 
 The entire course is about 2 hours long. We will only complete parts 2, 3 and 4 which should take you about 90 minutes. 
 

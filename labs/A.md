@@ -12,7 +12,9 @@ In this lab you will:
 
 - You cannot complete these labs without a Docker and Git setup. 
   - If you are working in the ITELL environment (because you are enrolled in the IST346 course at Syracuse University) then you are ready to start this lab.
-  - If you are working from your own personal computer, you must complete the software / setup prerequisites outlined here: https://github.com/mafudge/ist346-labs/blob/master/README.md
+  - If you are working from your own personal computer, you must complete the software / setup prerequisites outlined here: 
+  
+  [https://github.com/mafudge/ist346-labs/blob/master/README.md](https://github.com/mafudge/ist346-labs/blob/master/README.md)
 
 
 ## Part 1: The ITELL vLab
@@ -21,10 +23,10 @@ NOTE: If you are running the labs from your personal computer, you can skip this
 
 In this part you will become familiar with the ITELL (vLab). The ITELL vLab provides a logged in user with a means to access other computers remotely. Unlike remote lab, these computers are configured for very specific tasks, ususally associated with a course. Because it would be wasteful to setup a physical computer for each students, ITELL vLab uses *virtual machines* (VM) which are virtual computers running on top of a physical computer. All of the virtual machines running on the host computer share its resources of CPU, RAM and Disk. 
 
-Follow these instructions to connect to the ITELL vLab: 
-https://answers.syr.edu/x/coENB
+Follow these instructions to connect to the ITELL vLab:  
+[https://answers.syr.edu/x/coENB](https://answers.syr.edu/x/coENB)
 
-Once you are connected, follow these instructions to navigate to your the Virtual Machine used in this course,  and Power It On, and access the Console: https://answers.syr.edu/x/bQL-Aw 
+Once you are connected, follow these instructions to navigate to your the Virtual Machine used in this course,  and Power It On, and access the Console: [https://answers.syr.edu/x/bQL-Aw](https://answers.syr.edu/x/bQL-Aw) 
 
 For this class, the Virtual Machine (VM) we will use runs the Windows 10 operating system. The previous instructions explained how to power on your virtual machine and access the console (a.k.a. Screen / Keyboard and Mouse) for this virtual machine. 
 
@@ -35,7 +37,7 @@ By now, you're probably at a login window and wondering: How do I log on? Type:
 
 This will log you in to your virtual machine and bring you to the desktop. Here's where you'll stay to work on the labs.
 
-NOTE: When you are done with the lab it's a good idea to power off your virtual machine. That way the host computers will reclaim resources for other students and their lab activities! The instructions to power off are here: https://answers.syr.edu/x/bQL-Aw 
+NOTE: When you are done with the lab it's a good idea to power off your virtual machine. That way the host computers will reclaim resources for other students and their lab activities! The instructions to power off are here: [https://answers.syr.edu/x/bQL-Aw](https://answers.syr.edu/x/bQL-Aw) 
 
 IMPORTANT: Practice accessing the ITELL environment, powering your VM on and off, opening the console and logging on. You will need to do this a few times each week so its important to get the process down.
 
@@ -85,7 +87,7 @@ Cloning is a one-time deal, but you'll always need change the working directory 
 
 ### Where are the labs?
 
-The git respository has each lab in its own folder. For example this is `Lab A` and so the corresponding lab folder is `lab-A`. 
+The git repository has each lab in its own folder. For example this is `Lab A` and so the corresponding lab folder is `lab-A`. 
 
 1. To see all the lab folders, type: `dir`
 1. To change the working directory into one of the lab folders, type `cd lab-*N*` where N is the lab you wish to access. For example to change the working directory to this lab, the command would be: `cd lab-A`.  Type this now: `cd lab-A`
