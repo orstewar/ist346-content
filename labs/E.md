@@ -48,14 +48,59 @@ You should see labE_server and labE_workstation_1 through _5 up and running.
 
 ## Part 1: Package management with apt
 
-TODO
+The `apt` packaging system allows a user to manage software packages on a Linux system. Apt is a wrapper around the `dpkg` packaging system which is used for managing software on Debian Linux based distributions such as Ubuntu linux.
 
-apt-get install / remove
-apr-get update
+Let's issue some commands to see how the `apt` package system works.
 
-apt list --installed
+1. First let's connect to the Linux console on  our `server` container:  
+`PS ist346-labs\lab-E> docker-compose exec server bash`  
+You will now see the bash command prompt `root@server:/#`
+1. From the bash prompt, let's update the package database:  
+`root@server:/# apt-get update`  
+This updates the list of packages from the available repositories.
+1. Let's install the package `nethack-console` which is a text-based dungeon crawl game. To install, type:  
+`root@server:/# apt-get install -y nethack-console`  
+The `-y` will confirm the installation so that you don't have to type `Y` to continue.
+1. With the game installed, let's run it!  
+`root@server:/# nethack-console`  
+Sadly, it does not run... displaying a `bash: nethack-console: command not found` message. We know it was installed so where is it?
+1. So how can we find out what was installed and where it was installed? We need to fall back to the `dpkg` utility for this:  
+`root@server:/# dpkg -L nethack-console`  
+This command will list `-L` all of the files in the `nethack-console` package.  
+There's a few files in the package but the last one is the actual program itself:  
+`/usr/games/nethack-console` we know this because by *convention* Linux installs games to `/usr/games`.
+1. Armed with this new knowledge, let's run our game by qualifying the full path to it:  
+`root@server:/# dpkg -L /usr/games/nethack-console `   
+This time the game runs! You see the prompt:   
+`Who are you?`  
+Press `CTRL` + `c` to exit the game. (Hey, play games on your own time! hehe)
+1. What's installed? Want to see a list of packages which are installed? Try:  
+`root@server:/# apt list --installed `
+1. Too much information too soon? Let's pipe the output to `grep`. For example, let's look for all packages with `net` in them:  
+`root@server:/# apt list --installed  | grep "net"`  
+You should see our new favorite package, nethack console among some other packages.
+1. What if you want information about a package? Type:  
+`root@server:/# apt show nethack-console`   
+In the output you'll see the description:  
+`Description: dungeon crawl game - text-based interface`
+1. How do we list all of the available packages? Easy. Type:  
+`root@server:/# apt list`  
+Ooh. Too much information! 
+1. Let's pipe this to `less` so we can scroll through the output with our arrow keys.  
+`root@server:/# apt list | less`  
+Yikes! the `less` command is not found? 
+1. Well we know how to fix that! Install it with `apt`!!!:   
+`root@server:/# apt-get install -y less`
+1. Now, let's pipe it to `less`:  
+`root@server:/# apt list | less`   
+Scroll down until you find `alpine` then press `q` to quit `less`.
+1. Let's learn about `alpine`, try:  
+`root@server:/# apt show alpine`   
+Ooh that's interesting. It's an email client! 
+1. Finally let's uninstall our game. (No worries you can always install it again later)   
+`root@server:/# apt-get remove nethack-console`   
 
-dpkg -K
+Okay we learned how to install packages on Linux systems, but how would you do this on 200 linux systems without placing your hands on 200 keyboards? Read on to find out!
 
 ## Part 2: Using ansible to manage your systems
 
@@ -69,7 +114,7 @@ NOTE: You will need to log-in with your NetID and Password.
 
 To make the lab run smoothly we've setup most of ansible for you. Typically to do this you will need:
 
-- Ansible installed on at leastone computer (in this lab, it's been setup for you on the `server`)
+- Ansible installed on at least one computer (in this lab, it's been setup for you on the `server`)
 - python 2.7 or higher + ssh setup on each computer to be managed by ansible (each `workstation` has that configured for you in this lab). As usual, the password to ssh into the hosts is `IST346`
 
 To help you fully understand the power and flexibility of Ansible we will pretend our 5 workstations are divided up amongst 2 departments:
@@ -228,6 +273,7 @@ to tear down the docker containers used in this lab.
 1. What is the purpose of the command `apt-get update` ?
 1. Write a command to uninstall the package `bar` ?
 1. What is the command to list the files installed by the package `chicken` ?
+1. What can you do when the list of files is too large for your screen?
 1. What is Ansible?
 1. Explain idempotence and why is it important in systems management.
 1. Explain the purpose of a playbook file. What are its key advantages?
