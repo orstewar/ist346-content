@@ -59,7 +59,9 @@ NOTE: You'll probably want to use a pair of headphones so you can listen to the 
 
 ## Learning the Linux Command Line ##  
 
-You should follow along with the Lynda.com video starting for these chapters:
+You should follow along with the Lynda.com video 
+[https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu](https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu)
+ starting for these chapters:
 
 - **2. Command-Line Basics** -- The Full Chapter (approx 15 minutes of video
 - **3. Files, Folders and Permissions** -- Full Chapter (approx 35 minutes of video )
