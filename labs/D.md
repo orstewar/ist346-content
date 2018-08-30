@@ -56,7 +56,8 @@ Start by watching the following video: What is docker?
 
 Follow along with the Lynda.com video for this chapter:
 
-- ** 2. Using Docker ** -- Full Chapter (Approx 55 minutes)
+- **2. Using Docker** -- Full Chapter (Approx 55 minutes) from here:     
+[https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu)
 
 Important Tips: 
 
