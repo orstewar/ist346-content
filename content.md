@@ -104,13 +104,12 @@ Class Materials
 
 To-Do List
 
-- Read: TPOSANA Ch 13, 25
-- Read: ???
-- Watch: ???
+- Read: TPOSANA Ch 13, 14, 25, 26
+- Read: [Servers and Data Centers](content/reading-08-servers-data-centers.pdf)
 
 Class Materials
 
-- Slides
+- [Slides](content/08-servers-data-centers.pptx)
 
 # 09  
 ##  Services: Application Architectures
