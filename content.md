@@ -81,19 +81,94 @@ Class Materials
 To-Do List
 
 - Read: TPOSANA Ch 5,6,7
-- Read: [Workstations](/content/reading-07-workstations.pdf)
+- Read: [Workstations](content/reading-07-workstations.pdf)
 - Homework: [Lab E - Workstations and Clients](labs/E.md)
 
 Class Materials
 
 - [Slides](content/07-workstations-and-clients.pptx) 
 
-# 08 
-### Exam 1
+
+# Exam 1
 
 To-Do List
 
 - Study for Exam 1 (Covers Topics 01-06)
+
+Class Materials
+
+- None
+
+# 08 
+## Servers and Data Centers
+
+To-Do List
+
+- Read: TPOSANA Ch 13, 25
+- Read: ???
+- Watch: ???
+
+Class Materials
+
+- Slides
+
+# 09  
+##  Services: Application Architectures
+
+To-Do List
+
+- Read: TPOSANA Ch 16, 17
+- Read: [Services: Application Architectures](content/reading-09-services-application-architectures.pdf)
+- Watch: What is Service-Oriented Architecture: [https://www.youtube.com/watch?v=7s_S5Hkm7z0](https://www.youtube.com/watch?v=7s_S5Hkm7z0)
+- Watch: What are micro services? [https://www.youtube.com/watch?v=PY9xSykods4](https://www.youtube.com/watch?v=PY9xSykods4)
+- Homework: Lab F - Services And Application Architectures
+
+Class Materials
+
+- Slides
+
+# 10
+## Services: Monitoring and Logging
+
+To-Do List
+
+- Read: TPOSANA Ch 38
+- Watch: ???
+
+Class Materials
+
+- Slides
+
+# 11
+## Services: Scalability
+
+To-Do List
+
+- Read: TPOSANA Ch 18
+- Watch: ???
+- Homework: Lab G - Scalability
+
+Class Materials
+
+- Slides
+
+# 12
+## Namespaces, Identity Management 
+
+To-Do List
+
+- Read:	TPOSANA Ch 39, 40
+- Watch: Identity and Access Management: [https://www.youtube.com/watch?v=7wAF2m88a8s](https://www.youtube.com/watch?v=7wAF2m88a8s)
+
+Class Materials
+
+- Slides
+
+# Exam 2
+
+To-Do List
+
+- Study for Exam 1 (Covers Topics 07-11)
 
 Class Materials
 
