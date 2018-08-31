@@ -116,7 +116,7 @@ Please consult Blackboard for Reading list, Labs, and Homework which is due each
 | 2 | 9/3 | _No Classes – Labor Day_ | 9/5 | [03 - Managing IT](../content.md#03) |
 | 3 | 9/10 | [04- OS/Command Line Interfaces](../content.md#04) | 9/12 | [05 - Networking Fundamentals](../content.md#05) |
 | 4 | 9/17 | [06 - Virtualization and Containerization](../content.md#06) | 9/19 | [07 – Workstations and Clients](../content.md#07) |
-| 5 | 9/24 | **EXAM 1 (Covers topics 01-06)** | 9/26 | 08 – Servers and Data Centers |
+| 5 | 9/24 | **EXAM 1 (Covers topics 01-06)** | 9/26 | [08 – Servers and Data Centers](../content.md#08) |
 | 6 | 10/1 | 09 – Services: Application Architectures | 10/3 | 10 – Services: Monitoring and Logging |
 | 7 | 10/8 | 11 – Services: Scalability | 10/10 | 12 –Namespaces, Identity Management |
 | 8 | 10/15 | **EXAM 2 (Covers topics 07-11)** | 10/17 | 13 – Storage and File Systems |
