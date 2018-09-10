@@ -9,23 +9,9 @@ In this lab you will:
 
 ### Lab Setup At A Glance
 
-In this lab, we will have one server computer, running Ansible, and 5 identical workstation computers. We will use the docker-compose `scale` option to create 5  containers from the same workstation image. The IP Addresses of the workstations and server are included in the diagram for refrence. 
+In this lab, we will deploy several different setups. This time there will not be a default `docker-compose.yml` in your lab folder, but rather one for each application architecture we deploy.
 
-```
-+-------------+
-| workstations|----+
-| 172.44.1.2  |    |
-| through     |    |
-| 172.44.1.6  |    |
-+-------------+    |
-                   |   +---------------+     ++++++++++++++
-                   +---| host computer |-----|  Internet  |
-                   |   +---------------+     ++++++++++++++
-+--------------+   |
-|   server     |---+
-| 172.44.1.254 |
-+--------------+
-```
+This introduces the `-f` option to the `docker-compose` command to allow the user to provide a configuration in place of the standard `docker-compose.yml` file.
 
 ## Before you begin 
 
@@ -46,7 +32,29 @@ This lab prep's a little different as we will be scaling the workstation image t
 
 ## Part 1: Two-Tier Service
 
-Walk through a simple service example where you setup a static website using nginx. 2-tier client-server
+Walk through a simple service example where you setup a static website using nginx [https://www.nginx.com/](https://www.nginx.com/). This is a classic example of a 2-tier client-server application architecture with web browser on your host being the client and the Docker container running the Nginx web server being the server of course.
+
+Inside the container we will expose TCP port 80, the well-known port for the HTTP protocol to the host. This allows the web browser running on the host to have access to the Nginx web server runnin inside the Docker container.
+
+```
++-------------------+
+| Docker: nginx     |--+
+|http://webserver:80|  |
++-------------------+  |  +-------------------+   ++++++++++++++
+                       +--|host computer      |---|  Internet  |
+                          |http://localhost:80|   ++++++++++++++
+                          +-------------------+
+```
+
+1. Let's bring up the environment:  
+`docker-compose -f 2-tier.yml up -d`  
+Notice how we've included `-f 2-tier.yml` to the command to specify that specific docker-compose file.
+1. Let's see what's running:  
+`docker-compose -f 2-tier.yml ps`  
+The output should reveal that a container named `nginx_webserver` is running. Furthermore the container has TCP ports 22 and 80 in use, but only port 80 is exposed to the host `0.0.0.0:80 -> 80/tcp`
+1. Let's view our website:  
+Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80` you should see the **TechMag**
+
 
 
 ## Part 2: Three Tier Service 

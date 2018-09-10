@@ -124,7 +124,7 @@ To-Do List
 
 Class Materials
 
-- Slides
+- [Slides](content/09-services-application-architectures.pptx)
 
 # 10
 ## Services: Monitoring and Logging
