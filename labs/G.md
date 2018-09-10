@@ -9,6 +9,6 @@ In this lab you will:
 - Learn to consolidate logging in a horizontally scaled environment.
 
 
-Load balancer play with settings
+Load balancer play with settings learn how it works.
 
-consolidate logs to syslog.
+consolidate logs to syslog by overriding config.

@@ -53,18 +53,46 @@ Notice how we've included `-f 2-tier.yml` to the command to specify that specifi
 `docker-compose -f 2-tier.yml ps`  
 The output should reveal that a container named `nginx_webserver` is running. Furthermore the container has TCP ports 22 and 80 in use, but only port 80 is exposed to the host `0.0.0.0:80 -> 80/tcp`
 1. Let's view our website:  
-Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80` you should see the **TechMag**
+Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80` you should see the **Fudgemart.com**
 
+docker compuse up
+connect to web server
+check logs tail -F access.log
+reload page
+304 - Not modified
+request something not there
+404 not found
+edit content in notepad - it's hard because its HTML and that's not easy to do!
+now we get a 200  because the content has changed!
 
+Discuss challenges of 2-tier. Simplicity, but it does not have any advantages as far as editing content
 
 ## Part 2: Three Tier Service 
 
-Setup Django or let's chat or something like that.
+Overview 3 tier service with MKDocs static site generator. This add a layer of abstraction making it eaiser to edit content for a website using markdown instead of HTML.
+
+docker compose up
+connect to page load page
+switch theme to material
+reloads automatically - this is a feature of the mkdocs application. automatically detects changes to the content. 
+edit content to add Sporting Goods department
+review web page.
+show logs for nginx3 and mkdocs with docker-compose logs
 
 ## Part 3: N-Tier Service
 
-Django with a nginx front end.
+Wordpress CMS with MySQL database. Explain this setup. 
 
+docker-compose up
+ this takes a bit longer to get up and running as their are more moving parts
+ docker-compose logs mysql does it say ready for connections
+
+bring up application setup
+follow setup
+view site
+edit hello world post to talk about what we sell. 
+
+Ntier web applications are more complex but with that complexity usually comes convienence for the end users as code is written to manage the content of a website instead of managing it yourself in HTML or Markdown.
 
 
 ## Questions 
