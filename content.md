@@ -120,7 +120,7 @@ To-Do List
 - Read: [Services: Application Architectures](content/reading-09-services-application-architectures.pdf)
 - Watch: What is Service-Oriented Architecture: [https://www.youtube.com/watch?v=7s_S5Hkm7z0](https://www.youtube.com/watch?v=7s_S5Hkm7z0)
 - Watch: What are micro services? [https://www.youtube.com/watch?v=PY9xSykods4](https://www.youtube.com/watch?v=PY9xSykods4)
-- Homework: [Lab F - Services And Application Architectures](labs/E.md)
+- Homework: [Lab F - Services And Application Architectures](labs/F.md)
 
 Class Materials
 
