@@ -119,11 +119,13 @@ Let's put that to the test.
 1. The `notepad` utility should open. You will see HTML markup for the webpage. We're going to edit this page and add a **Sporting Goods** department. This is a bit of a challenge because you need to know HTML to do this. Find the line that says:  
 `<li>Housewares</li>`   
 And add the following line beneath it: `<li>Sporting Goods</li>` so that the markup now looks like this:
+
 ```
     <li>Housewares</li>
     <li>Sporting Goods</li>
 </ul>
 ```
+
 4. Let's close the `notepad` utility, and make sure to save the file when you exit.
 5. Go back to your `browser` and enter the website `http://localhost` you should now see an updated page with **Sporting Goods** added as a department. 
 ![updated page with sporting goods](images/lab-f-2-tier-fudgemart2.png)
