@@ -5,5 +5,5 @@
 - [C - Networking fundamentals](labs/C.md)
 - [D - Virtual Machines and Containers](labs/D.md)
 - [E - Workstations and clients](labs/E.md)
-- F - Services and Applications Architectures
- 
+- [F - Services and Applications Architectures](labs/F.md)
+- G - Scalability

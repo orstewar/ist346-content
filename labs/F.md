@@ -41,10 +41,10 @@ Inside the container we will expose TCP port 80, the well-known port for the HTT
 You will use the `chrome` web browser on your host computer to access the web server. 
 
 ```
-+-------------------+
++-----SERVER:WEB----+
 | Docker: nginx     |--+
 |http://webserver:80|  |
-+-------------------+  |  +-------------------+   ++++++++++++++
++-------------------+  |  +--CLIENT:BROWSER---+   ++++++++++++++
                        +--|host computer      |---|  Internet  |
                           |http://localhost:80|   ++++++++++++++
                           +-------------------+
@@ -55,10 +55,10 @@ You will use the `chrome` web browser on your host computer to access the web se
 Notice how we've included `-f 2-tier.yml` to the command to specify that specific docker-compose file.
 1. Let's see what's running:  
 `PS ist346-labs\lab-F> docker-compose -f 2-tier.yml ps`  
-The output should reveal that a container named `nginx_webserver` is running. Furthermore the container has TCP ports 22 and 80 in use, but only port 80 is exposed to the host `0.0.0.0:80 -> 80/tcp`
+The output should reveal that a container named `nginx2` is running. Furthermore the container has TCP ports 22 and 80 in use, but only port 80 is exposed to the host `0.0.0.0:80 -> 80/tcp`
 1. Let's view our website:  
-Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80` you should see the **Fudgemart.com**  
-1. You should see the following website:  
+Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80`  
+1. You should see the **Fudgemart.com** website:  
 ![Lab F 2 Tier Fudgemart Website Screenshot](images/lab-f-2-tier-fudgemart.png)
 
 ### Logging
@@ -130,7 +130,7 @@ And add the following line beneath it: `<li>Sporting Goods</li>` so that the mar
 6. Also look at the log output in the `powershell 1` window. You should see `"GET /"` with a `200` status code indicating the response was OK. 
 7. If you re-load the page notice the response code is once again `304` because the content was not modified.
 
-### Clean Up
+### Clean Up Before Next Part
 
 1. Let's get ready for the next part. Close the `powershell 1` log window.
 2. From the other command prompt change back to the `lab-F` folder by moving up two folders, type:  
@@ -142,46 +142,111 @@ And add the following line beneath it: `<li>Sporting Goods</li>` so that the mar
 
 In this next part we will host the **Fudgemart.com** website using the [MKDocs](https://www.mkdocs.org/) static site generator. A static site generator creates HTML content from the [markdown](https://en.wikipedia.org/wiki/Markdown) format. MKDocs will handle the process of detecting changes in the content and automatically sending a reload request to any clients. Nginx, running on tcp port 80 is configured to forward requests to the MKDocs service on tcp port 8000. This is a common use case for nginx: to act as an HTTP reverse-proxy for an another HTTP service (in this case, its MKDocs).  Typically the reverse proxy configured on a public IP address and handles forwarding HTTP traffic to multiple web applications on a private network. 
 
+What makes this example 3-Teir is we have:
+
+1. a client, the web browser
+2. a Web server, Nginx, which forwards requests on tcp 80 to the MKDocs server on port 8000
+3. business logic server, MKDocs which generates the HTML on tcp 8000
+
 ```
-         +-------------------+
-         | Docker: nginx     |----+
-      +--|http://webserver:80|    |
-      |  +-------------------+    |  +---------------------+   ++++++++++++++
-+-----+--------------+            +--| host computer       |---|  Internet  |
+          +----SERVER:WEB-----+
+          | Docker: nginx     |---+
+   +------|http://webserver:80|   |
+   |      +-------------------+   |  +---CLIENT:BROWSER----+   ++++++++++++++
++----SERVER:LOGIC----+            +--| host computer       |---|  Internet  |
 | Docker: MKDocs     |               | http://localhost:80 |   ++++++++++++++
 | http://mkdocs:8000 |               +---------------------+
 +--------------------+
 ```
 
-Let's explore how the 3 tier setup works and at the same time demonstrate the advantages of markdown over the HTML format when it comes to managing content. 
+Let's explore how this 3 tier setup works and at the same time demonstrate the advantages of markdown over the HTML format when it comes to managing content.
 
+1. First let's bring up the environment:  
+`PS ist346-labs\lab-F> docker-compose -f 3-tier.yml up -d`
+1. Let's  make sure it's running:  
+`PS ist346-labs\lab-F> docker-compose -f 3-tier.yml ps`  
+The output should reveal that two containers are running `nginx3` exposing tcp port `80` and `mkdocs` exposing tcp port `8000`
+1. Let's view our website:  
+Open up a browser, like chrome on your host, and enter the following address: `http://localhost:80` 
+1. You should see the **Fudgemart.com**  website:  
+![Lab F 2 Tier Fudgemart Website Screenshot](images/lab-f-3-tier-fudgemart.png)  
+The site looks quite different! This is what the MKDocs application does for us as we will explore in a future section.
 
-docker compose up
-connect to page load page
-switch theme to material
-reloads automatically - this is a feature of the mkdocs application. automatically detects changes to the content. 
-edit content to add Sporting Goods department
-review web page.
-show logs for nginx3 and mkdocs with docker-compose logs
+### What About The Logs?
 
+This docker setup has the logs configured to redirect to stdout. This allows us to use `docker-compose` to inspect the logs. This is a common method of logging while you are testing your container setup.
 
-It should be noted this is just one example of a 3 tier application. 
+1. To view the `nginx` logs, type:  
+`PS ist346-labs\lab-F> docker-compose -f 3-tier.yml logs nginx3`    
+Note that `nginx3` is the name of the container service.  
+You shoud see quite a bit more information in the output because the one page we see from our `"GET /"` is actually made up of several other supporting files and scripts.  
+1. Let's view the MKDocs application logs, type:  
+`PS ist346-labs\lab-F> docker-compose -f 3-tier.yml logs mkdocs`   
+In these load you'll see information about how the HTML (called documentation) is built from the content. 
+
+### Content updates using MKDocs
+
+In this section, we will explore the advantages of a business logic tier like MKDocs to update a website as opposed to simply editing HTML content directly. Once again we have exposed the contents of the website which are inside the container to a local folder, this time `3-tier\docs`.
+
+1. Let's edit the MKDocs configuration file so we can change the theme of the website. Type:   
+`PS ist346-labs\lab-F> notepad 3-tier\docs\mkdocs.yml`
+1. This brings up the configuration file in the text editor. Let's switch the site theme. Edit this line:   
+`name: mkdocs`  
+so that it reads:  
+`name: material`
+1. Close the text editor and save the file. 
+1. When you return to the `browser` you will see the page has reloaded automatically and there is a new site theme!  
+![Lab F 3 Tier new Theme](images/lab-f-3-tier-fudgemart2.png)  
+How does the page load automatically? That's a feature of MKDocs. When it detects a change on the server is sends a signal to each client browser to reload the page content.
+1. Let's put this to the test by adding the **Sporting Goods** department, edit the page:  
+`PS ist346-labs\lab-F> notepad 3-tier\docs\docs\index.md`  
+1. You will see the contents in Markdown format. To add a list item, simply add this line below  `- Housewares` :  
+`- Sporting Goods` 
+1. Close the text editor and save the page.
+1. When you return to the browser, it will have re-loaded and **Sporting Goods** will not appear in the page content!
+
+### Clean Up Before Next Part
+
+1. Let's get ready for the final part. Tear down the 3-tier setup, type:  
+`PS ist346-labs\lab-F> docker-compose -f 3-tier.yml down`
 
 ## Part 3: N-Tier Service
 
-Wordpress CMS with MySQL database. Explain this setup. 
+In this final part we will deploy an N-tier content/blog application, [wordpress](https://wordpress.org). Wordpress allows users to create websites without any knowledge of HTML. It's the classic example of the benefits of an N-Tier application - ease of use for the end user as the HTML is being created by the wordpress application itself based on user actions from its friendly user interface. Here's a summary of the tiers in this setup.
 
-docker-compose up
- this takes a bit longer to get up and running as their are more moving parts
- docker-compose logs mysql does it say ready for connections
+1. a client, the web browser
+2. a Web server, Nginx, which forwards requests on tcp 80 to the Wordpress server on port 8080
+3. Wordpress, the business logic application which makes managing a website easy and simple, running on tcp port 8080.
+4. Mysql, the database layer where the application stores content and changes, running on port tcp 3306. The wordpress application talks to the database over this port.
 
-bring up application setup
-follow setup
-view site
-edit hello world post to talk about what we sell. 
+1. First let's bring up the environment:  
+`PS ist346-labs\lab-F> docker-compose -f n-tier.yml up -d`
+1. Let's  make sure it's running:  
+`PS ist346-labs\lab-F> docker-compose -f n-tier.yml ps`  
+The output should reveal three containers are running `nginxn` exposing tcp port `80` and `wordpress` exposing tcp port `8080` and `mysql` exposing tcp `3306`.
+1. Load the wordpress site in your browser, type: `http://localhost`.   
+Please note it takes some time for the application to initialize. If you go to localhost and get an nginx error, please reload the page until you see the worpress setup. 
+1. Follow the prompts for the wordpress setup.  
+Site Title: **Fudgemart.com**  
+Username: **admin**  
+Password: **IST346**  
+Confirm use of weak password: **Checked**  
+Email: **mafudge@syr.edu**  
+Search Engine Visibility: **Checked**  
+Click `Install Wordpress`
+1. Login as **admin** with password **IST346** 
+1. You are now logged into wordpress.
 
-Ntier web applications are more complex but with that complexity usually comes convienence for the end users as code is written to manage the content of a website instead of managing it yourself in HTML or Markdown.
+At this point you are encouraged to play around! If you screw things up you can always tear down the environment and bring it back up again. Some things to try:
 
+1. Create a post and publish it.
+1. Change the theme of the site
+1. Edit the layout of the theme.
+
+### Clean Up
+
+1. To bring down the environment, Type:  
+`PS ist346-labs\lab-F> docker-compose -f n-tier.yml down`
 
 ## Questions 
 
@@ -190,3 +255,8 @@ Ntier web applications are more complex but with that complexity usually comes c
 1. If you type `snickers bars` into your favorite search engine, is that information being logged? Based on what you learned in this lab, do you know this?
 1. Does a web server log your activity when your browser is in private or incognito mode?
 1. What is an HTTP reverse proxy? Why is it used?
+1. What is Markdown? What is Markdown's relationship to HTML?
+1. What are the advantages of a site generator like MKDocs versus an static HTML site?
+1. Type the `docker-compose` command to view the `mysql` logs from the `n-tier` example.
+1. What are the advantage(s) of a system like wordpress over a static HTML website?
+1. What determines whether an application is 2-tier, 3-tier or n-tier?
