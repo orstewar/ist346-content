@@ -38,7 +38,7 @@ This lab prep's a little different as we will be scaling the workstation image t
 `PS > cd ist346-labs`
 3. Update your git repository to the latest version:  
 `PS ist346-labs> git pull origin master`
-4. Change the working directory to the `lab-C` folder:  
+4. Change the working directory to the `lab-E` folder:  
 `PS ist346-labs> cd lab-E`
 5. Start the lab environment in Docker:  
 `PS ist346-labs\lab-E> docker-compose up -d --scale workstation=5`

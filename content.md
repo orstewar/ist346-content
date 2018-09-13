@@ -132,7 +132,7 @@ Class Materials
 To-Do List
 
 - Read: TPOSANA Ch 38
-- Watch: ???
+- Watch: Exploring Linux Logs: [https://www.lynda.com/Linux-tutorials/Exploring-logs/718668/779174-4.html?org=syracuse.edu](https://www.lynda.com/Linux-tutorials/Exploring-logs/718668/779174-4.html?org=syracuse.edu)
 
 Class Materials
 
@@ -144,8 +144,8 @@ Class Materials
 To-Do List
 
 - Read: TPOSANA Ch 18
-- Watch: ???
-- Homework: Lab G - Scalability
+- Watch: Understanding Scalability: [https://youtu.be/NdZ3y6jK_Sc](https://youtu.be/NdZ3y6jK_Sc)
+- Homework: [Lab G - Scalability](labs/G.md)
 
 Class Materials
 
