@@ -137,7 +137,7 @@ To-Do List
 
 Class Materials
 
-- Slides
+- [Slides](content/10-services-monitoring-logging.pptx)
 
 # 11
 ## Services: Scalability
