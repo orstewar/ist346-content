@@ -132,6 +132,7 @@ Class Materials
 To-Do List
 
 - Read: TPOSANA Ch 38
+- Read: [Services: Monitoring and Logging](content/reading-10-services-monitoring-logging.pdf)
 - Watch: Exploring Linux Logs: [https://www.lynda.com/Linux-tutorials/Exploring-logs/718668/779174-4.html?org=syracuse.edu](https://www.lynda.com/Linux-tutorials/Exploring-logs/718668/779174-4.html?org=syracuse.edu)
 
 Class Materials
