@@ -159,6 +159,7 @@ To-Do List
 
 - Read:	TPOSANA Ch 39, 40
 - Watch: Identity and Access Management: [https://www.youtube.com/watch?v=7wAF2m88a8s](https://www.youtube.com/watch?v=7wAF2m88a8s)
+- Watch: OAuth and OpenIDConnect: [https://www.lynda.com/Security-tutorials/OAUTH-OpenID-Connect/601807/666981-4.html?org=syracuse.edu](https://www.lynda.com/Security-tutorials/OAUTH-OpenID-Connect/601807/666981-4.html?org=syracuse.edu)
 
 Class Materials
 
@@ -168,7 +169,7 @@ Class Materials
 
 To-Do List
 
-- Study for Exam 1 (Covers Topics 07-11)
+- Study for Exam 2 (Covers Topics 07-11)
 
 Class Materials
 
