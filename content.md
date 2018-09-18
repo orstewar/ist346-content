@@ -150,7 +150,7 @@ To-Do List
 
 Class Materials
 
-- Slides
+- [Slides](content/11-services-scalability.pptx)
 
 # 12
 ## Namespaces, Identity Management 
