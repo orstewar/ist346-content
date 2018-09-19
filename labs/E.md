@@ -4,12 +4,12 @@
 
 In this lab you will:
 
-- Learn how to install and configure software on a Ubuntu linux system with `apt`  
+- Learn how to install and configure software on a Ubuntu Linux system with `apt`  
 - Learn how to automate tasks to multiple computers using `Ansible` as part of systems management. 
 
 ### Lab Setup At A Glance
 
-In this lab, we will have one server computer, running Ansible, and 5 identical workstation computers. We will use the docker-compose `scale` option to create 5  containers from the same workstation image. The IP Addresses of the workstations and server are included in the diagram for refrence. 
+In this lab, we will have one server computer, running Ansible, and 5 identical workstation computers. We will use the docker-compose `scale` option to create 5  containers from the same workstation image. The IP Addresses of the workstations and server are included in the diagram for reference. 
 
 ```
 +-------------+
@@ -48,7 +48,7 @@ You should see labE_server and labE_workstation_1 through _5 up and running.
 
 ## Part 1: Package management with apt
 
-The `apt` packaging system allows a user to manage software packages on a Linux system. Apt is a wrapper around the `dpkg` packaging system which is used for managing software on Debian Linux based distributions such as Ubuntu linux.
+The `apt` packaging system allows a user to manage software packages on a Linux system. Apt is a wrapper around the `dpkg` packaging system which is used for managing software on Debian Linux based distributions such as Ubuntu Linux.
 
 Let's issue some commands to see how the `apt` package system works.
 
@@ -100,7 +100,7 @@ Ooh that's interesting. It's an email client!
 1. Finally let's uninstall our game. (No worries you can always install it again later)   
 `root@server:/# apt-get remove nethack-console`   
 
-Okay we learned how to install packages on Linux systems, but how would you do this on 200 linux systems without placing your hands on 200 keyboards? Read on to find out!
+Okay we learned how to install packages on Linux systems, but how would you do this on 200 Linux systems without placing your hands on 200 keyboards? Read on to find out!
 
 ## Part 2: Using ansible to manage your systems
 
@@ -177,7 +177,7 @@ You can clearly see in the output that it didn't install it again, but it would 
 
 ### Idempodentency is the name of Ansible's game
 
-One advantage of Ansible modules is they ensrue **idempotence** - that we can run the same tasks again and again without changing the final results. This is so important in systems management where you are often changing the files on a computer or the contents of a single file. 
+One advantage of Ansible modules is they ensure **idempotence** - that we can run the same tasks again and again without changing the final results. This is so important in systems management where you are often changing the files on a computer or the contents of a single file. 
 
 Let's see this in action.
 
@@ -186,7 +186,7 @@ Let's see this in action.
 First what does this command do?  
 `state=present` requests that the `pkg=mc` be installed on the workstation.  
 `update_cache=yes` requests that an `apt-get update` be performed before the install (should the install need to take place to begin with)  
-More importanty, the output is a lot different this time and much easier to read and understand 'what happened'. In fact you can see: `"changed": false` to indicate that no action was taken.
+More importantly, the output is a lot different this time and much easier to read and understand 'what happened'. In fact you can see: `"changed": false` to indicate that no action was taken.
 1. Now let's perform the same operation on `all` workstations:  
 `root@server:/# ansible all -k -m apt -a 'pkg=mc state=present update_cache=yes' `   
 This time you'll get a lot more output. If you scroll through the output you'll notice that `"changed": false` for workstations 4 and 5 (sales department), but `"changed": true` for workstations 1 and 3 (the it department). Idempotency!

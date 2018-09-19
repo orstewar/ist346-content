@@ -38,7 +38,7 @@ Class Materials
 ## OS/Command Line Interfaces
 
 To-Do List
-
+   
 - Homework: [ROI/TCO exercises](labs/roi-tco.md)
 - Watch: How Computers Work, Code.org [https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-](https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-) Watch all 6 videos in the series.
 - Read: [Operating Systems Architecture](/content/reading-04-operating-systems-architecture.pdf)

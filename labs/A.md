@@ -21,7 +21,7 @@ In this lab you will:
 
 NOTE: If you are running the labs from your personal computer, you can skip this part.
 
-In this part you will become familiar with the ITELL (vLab). The ITELL vLab provides a logged in user with a means to access other computers remotely. Unlike remote lab, these computers are configured for very specific tasks, ususally associated with a course. Because it would be wasteful to setup a physical computer for each students, ITELL vLab uses *virtual machines* (VM) which are virtual computers running on top of a physical computer. All of the virtual machines running on the host computer share its resources of CPU, RAM and Disk. 
+In this part you will become familiar with the ITELL (vLab). The ITELL vLab provides a logged in user with a means to access other computers remotely. Unlike remote lab, these computers are configured for very specific tasks, usually associated with a course. Because it would be wasteful to setup a physical computer for each students, ITELL vLab uses *virtual machines* (VM) which are virtual computers running on top of a physical computer. All of the virtual machines running on the host computer share its resources of CPU, RAM and Disk. 
 
 Follow these instructions to connect to the ITELL vLab:  
 [https://answers.syr.edu/x/coENB](https://answers.syr.edu/x/coENB)
@@ -53,7 +53,7 @@ Common command line prompts you will see in this course.
 
 | What is it? | Which Operating System? | What does it look like? |
 | ----------- | -------------- | -------------- |
-| Powershell Prompt | Windows Computers  | Begins with `PS` and ends with `>` For example: `PS C:\Users\LocalAdmin>` |
+| PowerShell Prompt | Windows Computers  | Begins with `PS` and ends with `>` For example: `PS C:\Users\LocalAdmin>` |
 | Bash Prompt (as a user) | Linux Computers | Ends with a `$`, contains user and computer name Example `scott@servera:~$` |
 | Bash Prompt (as a root) | Linux Computers | Ends with a `#`, usually contains user and computer name. Example `root@localhost:/#` |
 
@@ -69,12 +69,12 @@ Let's cover how to get the lab files. These are stored in a *git repository*, wh
 
 ### Cloning ###
 
-The git respoistory for the course labs is `https://github.com/mafudge/ist346-labs.git` Let's copy it to your Windows 10 VM, which is called a *clone* in git nomenclature.
+The git repository for the course labs is `https://github.com/mafudge/ist346-labs.git` Let's copy it to your Windows 10 VM, which is called a *clone* in git nomenclature.
 
 1. Open the PowerShell prompt.
 1. Type: `git clone https://github.com/mafudge/ist346-labs.git` and press `ENTER` to submit the command. It will take a few seconds to copy the code locally.
 
-IMPORTANT: You only need to clone the repository once! Thats it! It now lives on your computer in a folder named `ist346-labs`
+IMPORTANT: You only need to clone the repository once! That's it! It now lives on your computer in a folder named `ist346-labs`
 
 ### Accessing the Repository folder
 
@@ -118,7 +118,7 @@ Do you think you can do each of these commands? Practice them now with the `lab-
 
 Let's talk about the actual labs. Each lab consists of one or more computers networked together to demonstrate a concept. For example when covering web applications we might work with a database, web server and load balancer all within the comfy-confines of your Windows 10 VM.
 
-How is this possible?  The technology which allows us to do this is called *containerization*, it's like virtualization, but more efficient with the resources. The container application we will use is called *Docker*. We will setup and tear-down complex computer scenairos easily as part of the labs in this course. 
+How is this possible?  The technology which allows us to do this is called *containerization*, it's like virtualization, but more efficient with the resources. The container application we will use is called *Docker*. We will setup and tear-down complex computer scenarios easily as part of the labs in this course. 
 
 First docker will download the images of the operating systems and applications we require for that lab. Then it will run the image allocating network, CPU, disk, and memory to it. At this point it's called a container.  
 So containers are a lot like virtual machines, but offer several advantages:

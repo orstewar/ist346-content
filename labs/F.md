@@ -69,7 +69,7 @@ Let's view the log output in real time so we can see logging in action.
 
 1. From your PowerShell command prompt, start another command prompt:  
 `PS ist346-labs\lab-F> start powershell`
-1. You will now have two powershell command prompts open. Try to arrange your windows so that you can see the website, and BOTH powershell windows. This is important as you will want to be able to view the web site and the logs at the same time. I suggest arranging your windows like this:
+1. You will now have two PowerShell command prompts open. Try to arrange your windows so that you can see the website, and BOTH PowerShell windows. This is important as you will want to be able to view the web site and the logs at the same time. I suggest arranging your windows like this:
 ```
 +-------------------------+
 | browser    | powershell |
@@ -181,7 +181,7 @@ This docker setup has the logs configured to redirect to stdout. This allows us 
 1. To view the `nginx` logs, type:  
 `PS ist346-labs\lab-F> docker-compose -f 3-tier.yml logs nginx3`    
 Note that `nginx3` is the name of the container service.  
-You shoud see quite a bit more information in the output because the one page we see from our `"GET /"` is actually made up of several other supporting files and scripts.  
+You should see quite a bit more information in the output because the one page we see from our `"GET /"` is actually made up of several other supporting files and scripts.  
 1. Let's view the MKDocs application logs, type:  
 `PS ist346-labs\lab-F> docker-compose -f 3-tier.yml logs mkdocs`   
 In these load you'll see information about how the HTML (called documentation) is built from the content. 
@@ -214,21 +214,21 @@ How does the page load automatically? That's a feature of MKDocs. When it detect
 
 ## Part 3: N-Tier Service
 
-In this final part we will deploy an N-tier content/blog application, [wordpress](https://wordpress.org). Wordpress allows users to create websites without any knowledge of HTML. It's the classic example of the benefits of an N-Tier application - ease of use for the end user as the HTML is being created by the wordpress application itself based on user actions from its friendly user interface. Here's a summary of the tiers in this setup.
+In this final part we will deploy an N-tier content/blog application, [wordpress](https://wordpress.org). WordPress allows users to create websites without any knowledge of HTML. It's the classic example of the benefits of an N-Tier application - ease of use for the end user as the HTML is being created by the WordPress application itself based on user actions from its friendly user interface. Here's a summary of the tiers in this setup.
 
 1. a client, the web browser
-2. a Web server, Nginx, which forwards requests on tcp 80 to the Wordpress server on port 8080
-3. Wordpress, the business logic application which makes managing a website easy and simple, running on tcp port 8080.
-4. Mysql, the database layer where the application stores content and changes, running on port tcp 3306. The wordpress application talks to the database over this port.
+2. a Web server, Nginx, which forwards requests on tcp 80 to the WordPress server on port 8080
+3. WordPress, the business logic application which makes managing a website easy and simple, running on tcp port 8080.
+4. Mysql, the database layer where the application stores content and changes, running on port tcp 3306. The WordPress application talks to the database over this port.
 
 1. First let's bring up the environment:  
 `PS ist346-labs\lab-F> docker-compose -f n-tier.yml up -d`
 1. Let's  make sure it's running:  
 `PS ist346-labs\lab-F> docker-compose -f n-tier.yml ps`  
 The output should reveal three containers are running `nginxn` exposing tcp port `80` and `wordpress` exposing tcp port `8080` and `mysql` exposing tcp `3306`.
-1. Load the wordpress site in your browser, type: `http://localhost`.   
-Please note it takes some time for the application to initialize. If you go to localhost and get an nginx error, please reload the page until you see the worpress setup. 
-1. Follow the prompts for the wordpress setup.  
+1. Load the WordPress site in your browser, type: `http://localhost`.   
+Please note it takes some time for the application to initialize. If you go to localhost and get an nginx error, please reload the page until you see the WordPress setup. 
+1. Follow the prompts for the WordPress setup.  
 Site Title: **Fudgemart.com**  
 Username: **admin**  
 Password: **IST346**  
@@ -237,7 +237,7 @@ Email: **mafudge@syr.edu**
 Search Engine Visibility: **Checked**  
 Click `Install Wordpress`
 1. Login as **admin** with password **IST346** 
-1. You are now logged into wordpress.
+1. You are now logged into WordPress.
 
 At this point you are encouraged to play around! If you screw things up you can always tear down the environment and bring it back up again. Some things to try:
 
@@ -260,5 +260,5 @@ At this point you are encouraged to play around! If you screw things up you can 
 1. What is Markdown? What is Markdown's relationship to HTML?
 1. What are the advantages of a site generator like MKDocs versus an static HTML site?
 1. Type the `docker-compose` command to view the `mysql` logs from the `n-tier` example.
-1. What are the advantage(s) of a system like wordpress over a static HTML website?
+1. What are the advantage(s) of a system like WordPress over a static HTML website?
 1. What determines whether an application is 2-tier, 3-tier or n-tier?

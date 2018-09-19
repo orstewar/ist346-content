@@ -6,7 +6,7 @@ In this lab you will:
 
 - Learn basic networking commands for PowerShell and Linux
 - Understand the basics of how the Docker network environment works.
-- Learn the basics of the linux command line. 
+- Learn the basics of the Linux command line. 
 
 ### Lab Setup At A Glance
 
@@ -70,7 +70,7 @@ You're going to see a few IP addresses in your output. Focus on the one for `Eth
 
 ### DNS: What's my Name? 
 
- You probably don't call your friends using their phone number - you use a contact list and dial by name. DNS serves this purpose on the Internet - looking up  names to IP addreses and vice-versa. Imagine a system where if you ask to dial someone not in your contact list it would look up the phone number for you in someone else's list. That, in essence is how DNS works. There are several DNS servers on the internet each is the authority over one or more domains, like syr.edu or google.com.
+ You probably don't call your friends using their phone number - you use a contact list and dial by name. DNS serves this purpose on the Internet - looking up  names to IP addresses and vice-versa. Imagine a system where if you ask to dial someone not in your contact list it would look up the phone number for you in someone else's list. That, in essence is how DNS works. There are several DNS servers on the internet each is the authority over one or more domains, like syr.edu or google.com.
  
 1. What is the IP address for a given hostname? To find the IP address for a given hostname, we use `nslookup`. Type:
 `PS ist346-labs\lab-C> nslookup ischool.syr.edu`   
@@ -89,7 +89,7 @@ Looking up names and numbers is fine, but how to we know the computer we want to
 
 1. Is the ischool website host online? Type this to ping the server 4 times:  
 `PS ist346-labs\lab-C> ping -n 4 ischool.syr.edu`    
-In the response you will each reply. In the reply it gives you a response time in milliseonds. It also gives you a summary of how long the request and response took round-trip. This is a good indicator of how fast and reliable the network is between you and the host. 
+In the response you will each reply. In the reply it gives you a response time in milliseconds. It also gives you a summary of how long the request and response took round-trip. This is a good indicator of how fast and reliable the network is between you and the host. 
 1. Let's ping the IP address `1.2.3.4`, which I'm certain is not around:    
 `PS ist346-labs\lab-C> ping -n 2 1.2.3.4`  
 You will see that the requests time out. 
@@ -97,11 +97,11 @@ You will see that the requests time out.
 `PS ist346-labs\lab-C> ping -n 2 www.apphammer.co`  
 Notice how the response time was a bit longer (60ms). 60 milliseconds is still pretty fast but in the world of the Internet, every millisecond counts!
 
-IMPORTANT: It should be noted that just because the computer responds, it does not imply the service running on the computer actually works. Ping only verifes network connectivity between you and the host in question. Also some network administrators block ping requests via a firewall so the host might actually function but not respond to ping requests.
+IMPORTANT: It should be noted that just because the computer responds, it does not imply the service running on the computer actually works. Ping only verifies network connectivity between you and the host in question. Also some network administrators block ping requests via a firewall so the host might actually function but not respond to ping requests.
 
 ### Tracert: Ya can't get there from here.
 
-The trace route `tracert` utility shows the route over the Internet your data packets take from source to destination. For each router along the way (called a hop) it calculates the round-trip time (RTT) from source to that hop. In general the lower the number of hops and the lower the round trip time (RTT) the fast the communucation between you and the host will be.
+The trace route `tracert` utility shows the route over the Internet your data packets take from source to destination. For each router along the way (called a hop) it calculates the round-trip time (RTT) from source to that hop. In general the lower the number of hops and the lower the round trip time (RTT) the fast the communication between you and the host will be.
 
 1. This should go quickly:  
 `PS ist346-labs\lab-C> tracert ischool.syr.edu`  
@@ -112,11 +112,11 @@ This output used 20 hops and required 61 milliseconds. Again, consistent with th
 
 1. Let's tracert a problem. In this example we will use an IP address not on the Internet. To make the example go faster we will restrict the RTT to 10 milliseconds and the number of hops to 8.   
 `PS ist346-labs\lab-C> tracert -w 10 -h 8 1.2.3.4`   
-You'll notice that as soon as we route off campus and on to the public internet, we can not find the host, and recieve a series of timeouts until we reach the maximum number of hops. This type of output is indicitive of situations when hosts are not available.
+You'll notice that as soon as we route off campus and on to the public internet, we can not find the host, and receive a series of timeouts until we reach the maximum number of hops. This type of output is indicative of situations when hosts are not available.
 
 ## Part 2: Ports
 
-As we said before just because a host responds to a ping it does not necessairly imply the service running on the host is available. For instance you might be able to ping a webserver but for some reason none of the web pages on that server load.
+As we said before just because a host responds to a ping it does not necessarily imply the service running on the host is available. For instance you might be able to ping a webserver but for some reason none of the web pages on that server load.
 
 The applications which run on these servers communicate over a port. The port consists of a number between 0 and 65535 and a protocol of either TCP or UDP. Common services we use everyday such as HTTP are setup to run over the same port. This ensures consistency from and makes it easer for clients to consume the service. 
 
@@ -132,7 +132,7 @@ A list of the well-known ports can be found here:
 Indicating that you are no longer in PowerShell but inside your workstation linux container.
 1. Let's check the ip address of the workstation, type:  
 `root@workstation:/# ifconfig`   
-Notice that on linux it is `ifconfig` not `ipconfig`. Also the interface it called `eth0`. Make a note of the IP Address of your workstation.
+Notice that on Linux it is `ifconfig` not `ipconfig`. Also the interface it called `eth0`. Make a note of the IP Address of your workstation.
 
 ### Scanning for ports
 

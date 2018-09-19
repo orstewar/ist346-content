@@ -10,7 +10,7 @@ In this lab you will:
 
 ### Lab Setup At A Glance
 
-In this lab we will demostrate how applications are scaled horizontally. Specifically we will run a web application built using the [Flask Web Framework](http://flask.pocoo.org) through a load balancer. The Load balancer we will use is called [HAProxy](http://www.haproxy.org/ ). It is a very fast, reliable load balancer which comes with a variety of configurable algorithms for balancing load across servers on a network. We will spin up multiple instances of the same Flask web application behind the load balancer in so that we can get a clear picture of how traffic is distributed by a load-balancing application like HAProxy.
+In this lab we will demonstrate how applications are scaled horizontally. Specifically we will run a web application built using the [Flask Web Framework](http://flask.pocoo.org) through a load balancer. The Load balancer we will use is called [HAProxy](http://www.haproxy.org/ ). It is a very fast, reliable load balancer which comes with a variety of configurable algorithms for balancing load across servers on a network. We will spin up multiple instances of the same Flask web application behind the load balancer in so that we can get a clear picture of how traffic is distributed by a load-balancing application like HAProxy.
 
 ```
           +----LOAD BALANCER--+   +---CLIENT:BROWSER----+   ++++++++++++++
@@ -121,7 +121,7 @@ Then close the window and save your changes.
 
 ## uri
 
-The `uri` algorithm selects an instance based on a hash of the uri (Uniform Resource Indicator). This algorithm differs from the `leastconn` or `roundrobin`, in that a given uri will always map to the same instance. Let's see a demo
+The `uri` algorithm selects an instance based on a hash of the Uri (Uniform Resource Indicator). This algorithm differs from the `leastconn` or `roundrobin`, in that a given Uri will always map to the same instance. Let's see a demo
 
 1. First bring down your existing environment, type:  
 `PS ist346-labs\lab-G> docker-compose down`
@@ -134,10 +134,10 @@ and change it to:
 Then close the window and save your changes.
 1. Let's bring up the environment with a scale of 3:  
 `PS ist346-labs\lab-G> docker-compose up -d --scale webapp=3`
-1. Now let's return to the browser where we have **Sample Web Application** running on `http://localhost` notice how with every page load we get the same instance. This is because that uri maps to the instance you see.
-1. Let's try another uri in the browser, type `http://localhost/a` you will get a different instance. If you re-load the page (you must do this manually) you will still get the same instance for this `uri`.
-1. Let's try a 3rd uri in the browser, type `http://localhost/b` you will get yet another different instance. If you re-load the page (you must do this manually) you will still get the same instance for this `uri`.
-1. Going back to either `http://localhost`, `http://localhost/a`, or `http://localhost/b` will always yeild a response from the same instance. That's how uri mapping works!
+1. Now let's return to the browser where we have **Sample Web Application** running on `http://localhost` notice how with every page load we get the same instance. This is because that Uri maps to the instance you see.
+1. Let's try another Uri in the browser, type `http://localhost/a` you will get a different instance. If you re-load the page (you must do this manually) you will still get the same instance for this `uri`.
+1. Let's try a 3rd Uri in the browser, type `http://localhost/b` you will get yet another different instance. If you re-load the page (you must do this manually) you will still get the same instance for this `uri`.
+1. Going back to either `http://localhost`, `http://localhost/a`, or `http://localhost/b` will always yield a response from the same instance. That's how uri mapping works!
 
 There are other algorithms which in this manner. Consider their applications. Imagine distributing load based on geographical location, browser type, operating system, user attributes, etc... This offers a greater degree of flexibility for how we balance load.
 
@@ -155,8 +155,8 @@ to tear down the docker containers used in this lab.
 1. What do we call multiple copies of the service we scale horizontally?
 1. What are the two things HA Proxy does as explained in this lab?
 1. Why is scaling out to more nodes/instances easier than scaling back to fewer nodes/instances?
-1. Type the command to scale the servce `db` to `7` instances.
-1. Type the command bring up an environmnt and scale service `foo` to `8` instances.
+1. Type the command to scale the service `db` to `7` instances.
+1. Type the command bring up an environment and scale service `foo` to `8` instances.
 1. How does the `leastconn` algorithm differ from the `roundrobin` algorithm? How are they similar?
 1. What are some potential uses of the `uri` load balancer algorithm?
 1. In spite of being load balanced, does our environment still have a single point of failure? If so, what is it? How can this be remedied?

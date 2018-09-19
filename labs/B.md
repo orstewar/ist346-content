@@ -63,13 +63,13 @@ You should follow along with the Lynda.com video
 [https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu](https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu)
  starting for these chapters:
 
-- **2. Command-Line Basics** -- The Full Chapter (approx 15 minutes of video
-- **3. Files, Folders and Permissions** -- Full Chapter (approx 35 minutes of video )
-- **4. Common Command-Line Tasks and Tools** - Stop After **Edit Text with nano** (approx 25 minutes of video)  
+- **2. Command-Line Basics** -- The Full Chapter (approx. 15 minutes of video
+- **3. Files, Folders and Permissions** -- Full Chapter (approx. 35 minutes of video )
+- **4. Common Command-Line Tasks and Tools** - Stop After **Edit Text with nano** (approx. 25 minutes of video)  
 
 Tips for getting the most out of the videos!
 
-- As you watch the video, you should be able to type the same commands in your linux docker container, where you see the `scott@localhost:~$ ` prompt.
+- As you watch the video, you should be able to type the same commands in your Linux docker container, where you see the `scott@localhost:~$ ` prompt.
 - Pause the video and try the commands for yourself. The best way to learn them is to get your hands dirty!
 - As you complete the commands and watch the video, write down any questions you have. You are encouraged to ask questions when we go over the lab in our next class session.
 
@@ -94,7 +94,7 @@ will start the container back up again restoring it to the original state.
 ## Questions ##
 
 1. For the command `docker-compose exec foo bar` What does `foo` represent? What does `bar` represent?
-1. How do you get help in linux?
+1. How do you get help in Linux?
 1. What is a pipe?
 1. For the following file:  
 `-rw-r-xr-- 1 scott comedians  1474 Jun 21 20:54 poems.txt`
@@ -106,6 +106,6 @@ will start the container back up again restoring it to the original state.
 1. How can you determine if you are a `root` user from the command line?
 1. Which command allows a user to elevate to run command as the super-user? 
 1. What is a link? What are the two types of links?
-1. Write the linux command to move a file named `a.txt` in the `Documents` folder into the `Desktop` folder. Note: Assume both folders are the same parent directory.
-1. Write the linux command to list files in a folder two folder up from the current working directory.
-1. Write the linux command to find the files that begin with the letter `t` in the `/bin` folder.
+1. Write the Linux command to move a file named `a.txt` in the `Documents` folder into the `Desktop` folder. Note: Assume both folders are the same parent directory.
+1. Write the Linux command to list files in a folder two folder up from the current working directory.
+1. Write the Linux command to find the files that begin with the letter `t` in the `/bin` folder.

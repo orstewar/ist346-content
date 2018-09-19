@@ -35,7 +35,7 @@ CREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Name
 
 ### Log in to Lynda.com with your Syracuse University Account ###
 
-1. Nagivate your web browser to https://lynda.syr.edu 
+1. Navigate your web browser to https://lynda.syr.edu 
 2. This will prompt you with a Syracuse University login screen. Login with your Syracuse University **NetID** and **Password**. 
 3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu) 
 
@@ -61,9 +61,9 @@ Follow along with the Lynda.com video for this chapter:
 
 Important Tips: 
 
-- The author is using linux but you are using PowerShell. The lab should work fine.
+- The author is using Linux but you are using PowerShell. The lab should work fine.
 - As you watch the video, you should be able to type the same commands from your PowerShell command prompt. 
-- When you need to open additional windows, like in the video, type `start powershell` from the PowerShell command prompt to open powershell in another window.
+- When you need to open additional windows, like in the video, type `start powershell` from the PowerShell command prompt to open PowerShell in another window.
 - At one point you will need to know the IP Address of the computer running docker. In PowerShell you can get this with `ipconfig`  unlike the `ifconfig` command the author uses in the Linux video.
 
 ## Tear-Down the Lab Environment ##
