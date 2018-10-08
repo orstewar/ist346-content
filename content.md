@@ -163,7 +163,7 @@ To-Do List
 
 Class Materials
 
-- Slides
+- [Slides](content/12-namspaces-identity-management.pptx)
 
 # Exam 2
 
