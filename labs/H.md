@@ -2,16 +2,31 @@
 
 ## Learning Objectives
 
-In this lab you will leard about networked storage and file systems by exploring them in three parts:
+In this lab you will learn about networked storage and file systems by exploring them in three parts:
 
 - PART 1: You will learn about the basics of networked storage using Samba.
 - PART 2: You will understand how network storage is actually deployed in an organization using with centralized authentication.
-- PARt 3: You will learn how cloud object based storage works, using Mineo, a Amazon S3 (Simple Storage Sercice) compatible file system.
+- PART 3: You will learn how cloud object based storage works, using Mineo, a Amazon S3 (Simple Storage Service) compatible file system.
+
+## Before you begin 
+
+### Prep your lab environment. 
+
+1. Open the PowerShell Prompt
+2. Change the working directory folder to `ist346-labs`  
+`PS > cd ist346-labs`
+3. IMPORTANT: This lab requires access to Docker's internals, you must enter this command:  
+`PS ist346-labs> $Env:COMPOSE_CONVERT_WINDOWS_PATHS=1`
+3. Update your git repository to the latest version:  
+`PS ist346-labs> git pull origin master`
+4. Change the working directory to the `lab-H` folder:  
+`PS ist346-labs> cd lab-H`
+
 
 
 ## Part 1: SMB and PAM
 
-In this first part we setup a simple SMB (Server Message Block) server using Samba. Samba allows us to share files on one system and make them accessible to another over a network. We will control access to the  files though Samba users and Linux PAM (Pluggable Authenitcation Modules).
+In this first part we setup a simple SMB (Server Message Block) server using Samba. Samba allows us to share files on one system and make them accessible to another over a network. We will control access to the  files though Samba users and Linux PAM (Pluggable authenitcation modules).
 
 #### Goals
 
@@ -26,11 +41,13 @@ The server has the proper dependencies and packages pre installed.
 
 Lets start by brining up our docker environment. Open you terminal and navigate to the folder that contains the docker-compose file for part 1. And the docker-compose up
 
-```
-$ docker-compose up -d
-```
+Change the working directory to the `part1` folder:  
+`PS ist346-labs\lab-H> cd part1`
 
-You should see something similiar to the following screen.
+Start the lab environment in Docker:  
+`PS ist346-labs\lab-H\part1> docker-compose up -d`
+
+You should see something similar to the following screen.
 
 ```
 Creating network "part1_default" with the default driver
@@ -42,43 +59,28 @@ So now the server and client are running waiting to be setup!
 
 First docker exec into the server
 
-```
-$ docker exec -it part1_server_1 bash
-```
+`PS ist346-labs\lab-H\part1> docker-compose exec server bash`
 
-Once at the server container root prompt, lets setup the server. First we need to add a new user that will allow us to connect to our share. When is asks for a password use something easy to remember
+Once at the server container root prompt, lets setup the server. First we need to add a new user that will allow us to connect to our share.
 
-```
-$ useradd ist-t-user --shell /bin/false
-```
+`root@sever:/# useradd testuser -m --shell /bin/false`
 
-This will add a new user with the username ist-t-user, the --shell flag does not allow the user to login to the server.
+This will add a new user with the username testuser, the `--shell` flag of `/bin/false` does not allow the user to login to the server. The `-m` option creates the home directory.
 
-Next we need to create a home directory for the user and give the new user ownership of the directory
+Next we need to create a Samba password for this user. I suggest something easy to remember, like `SU2orange!` or `testing`.
 
-```
-$ mkdir -p /home/ist-t-user
-$ chown ist-t-user:ist-t-user /home/ist-t-user
+`root@server:/# smbpasswd -a testuser`
+ 
+Now that we have a user with a password, we need to configure Samba to share the directory with clients to do this we need to edit the smb.conf file that is installed with Samba. We do this with the nano editor using the command below.
 
-# ls command lists the directory and ownership info
-# Should show that ist-t-user owns the directory
-$ ls -l /home
-total 4
-drwxr-xr-x 1 ist-t-user ist-t-user 4096 Sep 12 03:08 ist-t-user
-```
-
-Now we need to configure Samba to share the directory with clients to do this we need to edit the smb.conf file that is installed with Samba. We do this with the nano editor using the command below.
-
-```
-$ nano /etc/samba/smb.conf
-```
+`root@server:/# nano /etc/samba/smb.conf`
 
 The file contains an enormous amount of configuration options. We are going to go right to the bottom of the file and add the code below
 
 ```
 [myshare]
-path = /home/ist-t-user
-valid users = ist-t-user
+path = /home/testuser
+valid users = testuser
 available = yes
 browsable = yes
 public = yes
@@ -86,14 +88,13 @@ writable = yes
 read only = no
 ```
 
-What's this? this tell samba to expost the path /home/ist-t-user and call it myshare. The only user that can access this share is ist-t-user. The other options allow for browsability and access.
+What's this? this tell samba to expose the path `/home/testuser` and call it `myshare`. The only user that can access this share is `testuser`. The other options allow for browsability and access. When you are finished with your edits, press `CTRL+X` to quit nano, pressing `y` then `ENTER` to save the file. 
 
 Once you add the above code to the smb.conf file you should test it for errors.
 
-```
-$ testparm
-```
-When you run this it will ask you to hit enter, and you will see an output similiar to the one below
+`root@server:/# testparm`
+
+When you run this it will ask you to hit `ENTER` to see your service definitions, and you will see an output similiar to the one below
 
 ```
 Load smb config files from /etc/samba/smb.conf
@@ -139,13 +140,13 @@ Press enter to see a dump of your service definitions
 
 
 [myshare]
-        path = /home/ist-t-user
-        valid users = ist-t-user
+        path = /home/testuser
+        valid users = testuser
         read only = No
         guest ok = Yes
 ```
 
-If there is an error it will tell you, the output below is shortened so you can see the error.
+If there is an error it will tell you, the output below is shortened so you can see the error, where I named the path `pathjk`
 
 ```
 Load smb config files from /etc/samba/smb.conf
@@ -171,8 +172,10 @@ After the server setup is complete and there are no errors we can start the serv
 First check the status.
 So see the status of a service, you can use the following command
 
+`root@server:/# service samba status`
+
+which will output:
 ```
-$ service samba status
 * nmbd is not running
 * smbd is not running
 ```
@@ -180,38 +183,48 @@ $ service samba status
 Currently our service is not running, lets fix that.
 user the service command to start samba, you will see the output below.
 
+`root@server:/# service samba start`
+
+The output: 
 ```
-$ service samba start
 * Starting NetBIOS name server nmbd       [ OK ]
 * Starting SMB/CIFS daemon smbd           [ OK ]
 ```
 
-To stop a service use the following command, if you stop it don't forget to start it again before moving onto the client setup!
+To stop a service use the following command, **if you stop it don't forget to start it again** before moving onto the client setup!
+
+`root@server:/# service samba stop`
 
 ```
-$ service samba stop
 * Stopping Samba AD DC daemon samba           [ OK ]
 * Stopping SMB/CIFS daemon smbd               [ OK ]
 * Stopping NetBIOS name server nmbd           [ OK ]
 ```
 
-At this point you can exit the container, or open a new terminal to access the client.
+One more
+`root@server:/# service samba status`
+
+To make sure its running, and if it is, its time to exit the server container:
+
+`root@server:/# exit`
 
 #### Access the share from a client
 
-To access the running client use docker exec
+Back at the PowerShell prompt, let's access the client:
 
-```
-$ docker exec -it part1_client_1 bash
-```
+`PS ist346-labs\lab-H\part1> docker-compose exec client bash`
+
 
 Once logged in you can view the shares provided by the server using the command below.
 
+`root@client:/# smbclient -L //server -U testuser`
+
+You will have to enter the password for `testuser` in order to authenticate to the Samba service and see the shares.
+
 ```
-$ smbclient -L //server -U ist-t-user
 
 WARNING: The "syslog" option is deprecated
-Enter ist-t-user's password:
+Enter testuser's password:
 Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
 
         Sharename       Type      Comment
@@ -222,7 +235,7 @@ Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
 
         Server               Comment
         ---------            -------
-        35F96533555E         35f96533555e server (Samba, Ubuntu)
+        SERVER         server server (Samba, Ubuntu)
 
         Workgroup            Master
         ---------            -------
@@ -233,65 +246,87 @@ We can see that the *myshare* that we created listed in the output
 
 To actually use the share, we need to mount it to the client file system. To do this we use the *mount* command.
 
-```
-$ mkdir /mnt/myshare
-$ mount -t cifs -o user=ist-t-user //server/myshare /mnt/myshare
-```
+First, we make a folder to serve as the mount point:
+`root@client:/# mkdir /mnt/myshare`
+
+Then we mount the Samba share to the mount point:
+`root@client:/# mount -t cifs -o user=testuser //server/myshare /mnt/myshare`
 
 after entering the password the shared path is now mounted to the local filesystem, and we can interact with it just like it was part of the client.
 
-We can create files
+We can create a file:
+
+`root@client:/# echo "This is a test" > /mnt/myshare/test.txt`
+
+We can list the files on the server: (NOTE:You should see the test.txt file that was created above)
+
+`root@client:/# ls /mnt/myshare`
+
+Now lets check the server, exit the client:
+
+`root@client:/# exit`
+
+And when you are back at the PowerShell prompt, connect to the server container: 
+
+`PS ist346-labs\lab-H\part1> docker-compose exec server bash`
+
+
+List the items in the folder we shared, we should see the new test.txt file!
+
+`$root@server:/# ls /home/testuser`
 
 ```
-$ echo "my new file" > /mnt/myshare/test.txt
-```
-
-We can list the files (You should see the test.txt file that was created above)
-
-```
-$ ls /mnt/myshare
-```
-
-Now lets check the server, if you exited before, open a new terminal and docker-exec into the server.
-
-```
-$ docker exec -it part1_server_1 bash
-```
-
-List the items in the share, we should see the new test.txt file!
-
-```
-$ ls /home/ist-t-user
 test.txt
-
-$ cat test.txt
-my new file
 ```
 
+And if we view the content of the file:
 
-- Show shares using samba client
-- Connect to samba share using client
-- Mount folder using mount command
-- Navigate to directory, add a file and some text
-- Show on server that file is there
+`root@server:/# cat test.txt`
+
+```
+This is a test
+```
+
+Our text is there!
+
+### Part 1 Teardown
+
+Exit the client to prepare for the next part:
+
+`root@server:/# exit`
+
+From the PowerShell prompt shutdown part 1
+
+`PS ist346-labs\lab-H\part1> docker-compose down`
+
+When the client and server are stopped, its time to start part 2, type:
+
+`PS ist346-labs\lab-H\part1> cd ..\part2`
+
+To change your working directory to the `part2` folder.
 
 ## Part 2: Samba with LDAP
 
-In the next part we will use an LDAP (Lightweight Directory Access Protocol) server to centralize the authentication of users and control the authorization of the SMB mounts. Central authenitcation is how it is done in organizations so we do not have to be in the business of managing users and passwords on multiple systems! Much of this is already setup for you, and you will just do the configuration. 
+In the next part we will use an LDAP (Lightweight Directory Access Protocol) server to centralize the authentication of users and control the authorization of the SMB mounts. Central authentication is how it is done in organizations so we do not have to be in the business of managing users and passwords on multiple systems! Much of this is already setup for you, and you will just do the configuration of the users and mounts. 
 
 https://www.techrepublic.com/article/how-to-populate-an-ldap-server-with-users-and-groups-via-phpldapadmin/
 
 ### Walkthrough
 
-Lets get started. Navigate to the part2 folder and start the environment
+Let's start the containers used in `part2`:
 
-```
-$ docker-compose up -d
-```
+`PS ist346-labs\lab-H\part2> docker-compose up -d`
 
 This will create 4 containers. The LDAP server, the phpLDAPadmin web interface, the Samba server, and the client we will use to connect to the server.
 
-Once all of the containers start you should be able to navigate to the web interface at [http://localhost:9080](http://localhost:9080) in your browser.
+```
+Creating part2_ldap-host_1 ... done
+Creating part2_smbserver_1 ... done
+Creating part2_ldap-ui_1   ... done
+Creating part2_client_1    ... done
+```
+
+Once all of the containers start, you should be able to navigate to the web interface at [http://localhost:9080](http://localhost:9080) in your browser.
 
 ![phpldapadmin](assets/phpldapadmin.png)
 
@@ -306,74 +341,128 @@ Once Logged in you will see the following screen.
 
 ![Start](assets/startscreen.png)
 
-Before we can start using samba we need to add a few things to our ldap directory.
+### LDAP Setup
 
-First we need to create a Samba Posix Group.
+Before we can start using samba we need to add a few things to our LDAP directory.
+
+First we need to create a **Samba** Posix Group.
 1. Click on the root of the tree.
-2. Click Create a child entry in the list of options that appear
-3. Choose Generic Posix Group
-4. For Group name just enter "samba"
+2. Click `Create a child entry` in the list of options that appear
+3. Choose `Generic Posix Group`
+4. For Group name just enter `samba`
 ![Group Create Screen](assets/group-create.png)
-5. Click create object and then commit
+5. Click `create object` and then click `commit` at the confirmation screen.
 
-Now we need to create a **users** group
-1. Click create child entry under the root again
-2. Choose Generic Organizational Unit
-3. Enter *users* for the name
+Now we need to create a **users** Organization Unit
+1. Click on the root of the tree. 
+1. Click `create child entry` under the root again
+2. Choose `Generic Organizational Unit`
+3. Enter `users` for the name
 ![Organization Unit Create](assets/oucreate.png)
-4. Click Create Object and then commit
+4. Click `Create Object` and then click `commit` to confirm.
 
-Your Organization Directory should no look like the following:
+
+Next we must create the **Samba domain** object:
+1. Click on the root of the tree. 
+1. Click `create child entry` under the root again
+2. Choose `Samba Domain`
+3. for the Samba domain name, enter `EXAMPLEORG`. Under typical circumstances, this is the name of your organization. In this case our organization is `example.org` to the name works!
+4. For the `sambaSID` use this:   
+`S-1-5-21-4294955119-3368514841-2087710299`  
+The SID is a unique security identifier for the domain. 
+5. Click `Create Object` and then click `commit` to confirm.
+
+Your Organization Directory should now look like the following:  
 ![Org Tree](assets/orgtree.png)
 
+### Add a samba user
+
 Now we need to create a user.
-1. Click on the **ou=users** group in your directory tree. Then choose **Create child entry**.
-2. Choose **Samba Account**
-3. Fill out the following form with the information below, remember the password you enter. Some of the values may be slightly different on your machine.
+1. Click on the **ou=users** group in your directory tree. 
+1. Then choose `Create child entry`.
+2. Choose `Samba Account`
+3. Fill out the following form with the information below, remember the password you enter, I suggest using `testing`. Some of the values may be slightly different on your machine.
 ![Samba Account](assets/createsmbuser.png)
-4. Click Create Object then commit on the following screen
+
+4. Click `Create Object` then click `commit` on the following screen to confirm. 
 5. To get our user to work with our setup we need to add a couple of attributes to our user. Your org tree should now look like the following
 ![Org Tree with User](assets/orgteewithuser.png)
-Click on the user in your tree to the left.
-6. Click on Add new attribute from the choices at the top.
-7. Select **sambaPwdMustChange** from the choices and enter **-1** for the value.
-8. Click Update Object at the bottom, then Update Object again.
-9. Click on Add new attribute again
-10. Select **sambaPwdLastSet** from the choices and enter **-1** again for the value
-11. Click Update Object again.
 
-Our LDAP server is now ready to use!
+Click on the `cn=Test User` in your tree to the left.
+6. Click on `Add new attribute` from the choices at the top.
+7. Select `sambaPwdMustChange` from the choices and enter `-1` for the value.
+8. Click `Update Object` at the bottom, then `Update Object` again.
+9. Click on `Add new attribute` again
+10. Select `sambaPwdLastSet` from the choices and enter `-1` again for the value
+11. Click `Update Object` then `Update Object` again.
 
-Lets try our client
+### Restarting the smbserver... a word about dependencies
 
-1. Open a new terminal and login to the client using docker.
-```
-$ docker exec -it part2_client_1
-```
-2. Mount the new drive to your home directory, is real life this would be done for you automatically when you login. 
-```
-$ mount -t cifs -o user=samba-tuser //smbserver/samba-tuser /home
-```
-3. Navigate to you new mounted share
-```
-$ cd /home/samba-tuser
-```
-4. And Create a new file
-```
-$ echo "my test file" > test.txt
-```
-5. You should see the new file appear on your host machine under the part2/shares directory. This is the network share working. How?
+When we did a `docker-compose up -d` we brought up all 4 services, but at that time the `smbserver` cannot start because LDAP information about the domain EXAMPLEORG had yet to be configured. Now that we have configured it we need to restart the service.
 
-When you start docker, the smbserver container mounts your host folder into the container. When you mount that folder from the smbserver the smbserver checks with the ldap server for authentication and if successful it then allows the mount to happen. From the client you can now create and edit files on the server just like they were part of the client machine! In the real world this would happend automatically for you when you login, kind of like how your H: drive is automatically available when you login to a computer on campus.
+For example Type:
 
-#### Other thing to try
+`PS ist346-labs\lab-H\part2> docker-compose ps`
 
-- Create another user, mount that directory to your client also.
-- Scale you clients to 2 or 3, follow the instructions to mount a share in each one, notice that updates you make on one appear in the other(s).
+And notice the `part2_smbserver_1` has a state of `Exit`. 
+
+If you inspect the logs:
+
+`PS ist346-labs\lab-H\part2> docker-compose logs smbserver`
+
+You'll see information about the `smbserver` not being able to find the `EXAMPLEORG` domain in the LDAP server. This is because at the time this service started, we hadn't created in in the LDAP server yet.
+
+This is an easy problem to fix. Simply restart the `smbserver`
+
+`PS ist346-labs\lab-H\part2> docker-compose restart smbserver`
+
+Then check the status of the environment, and if everything went to plan, all 4 services should be `Up`. Type:
+
+`PS ist346-labs\lab-H\part2> docker-compose ps`
+
+Now our Samba server bound to our LDAP server is now ready to use! 
+
+### Using the client
+
+Lets try to connect to the Samba share from the client, but unlike `part1` this time we will use the centrally managed account in LDAP.
+
+1. From PowerShell, login to the client container.
+`PS ist346-labs\lab-H\part2> docker-compose exec client bash`
+
+2. Mount the new drive to your home directory. In real life this would be done for you automatically when you login. 
+`root@client:/# mount -t cifs -o user=samba-tuser //smbserver/samba-tuser /home`
+`
+3. Let's change the directory to our newly mounted share:
+`root@client:/#$ cd /home/samba-tuser`
+
+4. And Create a new file:
+`root@client:/#$ echo "This is a test" > test.txt`
+
+5. Next, we exit the client and check for the file on the server.
+`root@client:/#$ exit`
+`PS ist346-labs\lab-H\part2> docker-compose exec smbserver bash`
+
+6. Let's look at the file!:
+`root@smbserver:/#$ cat /mnt/homes/samba-tuser/test.txt`
+
+And there are the contents!
+```
+This is a test
+```
+
+### Tear-down
+
+Let's get ready for `part3`, tear down this lab:
+
+`root@smbserver:/#$ exit`
+`PS ist346-labs\lab-H\part2> docker-compose down`
+`PS ist346-labs\lab-H\part2> cd ..\part3`
+
+You should now be in the `part3` folder.
 
 ## Part 3: Cloud Storage with Minio (Self Hosted S3)
 
-In this part we will utilize cloud storage provided by Minio. Minio is a self hosted S3 (Amazon's Simple Storage Serivce) compatable object storage. S3 is a very popular storage system used worldwide. This lab demonstrates how S3 protects files utilizing bucket policies. Minio only uses one user, but in S3 you can create a policies for many users.
+In this part we will utilize cloud storage provided by Minio. Minio is a self hosted S3 (Amazon's Simple Storage Serivce) compatable object storage. S3 is a very popular storage system used worldwide. This lab demonstrates how S3 protects files utilizing bucket policies. Minio only uses one user, but in S3 you can create a policies for many users. This method of file sharing is suitable in the cloud, where it is not pracital to give out accounts to users.
 
 #### Goals
 
@@ -385,9 +474,8 @@ In this part we will utilize cloud storage provided by Minio. Minio is a self ho
 ## Walkthrough
 
 Begin by starting you Minio environment. Navigate to part3 of the lab and issue the command below.
-```
-$ docker-compose up -d
-```
+
+`PS ist346-labs\lab-H\part3> docker-compose up -d`
 
 Once the container starts you should be able to navigate to [http://localhost:9000](http://localhost:9000) in your browser. If everything is working you should see the following screen.
 
@@ -396,57 +484,86 @@ Once the container starts you should be able to navigate to [http://localhost:90
 Login to the user interface with the following credentials.
 
 ```
-minio
-minio123
+access key: minio
+secret key: minio123
 ```
 
 Bucket is basically a root folder to store files in Minio. To create a bucket click the + button in the lower right corner. Choose create bucket. Then enter a name, in our example we use **mybucket**.
 
 ![Mino Screen with bucket](assets/showingbucket.png)
 
-Now that we have a bucket, lets use the client to upload a file. We will be using the minio client to interact with our server.
+Now that we have a bucket, lets use the client to upload a file. We will be using the minio client to interact with our server. Connect to the client:
+
+`PS ist346-labs\lab-H\part3> docker-compose run client`
+
+The prompt should say: `/go/src/github.com/minio #`
+
+The files we would like to upload from our client can be found in the `/files` folder:
+
+`/go/src/github.com/minio # ls /files`
 
 ```
-$ docker run -it -v testfile/test.png:/testfile/test.png --link part3_minio_1 --entrypoint=/bin/sh minio/mc:edge
+document.txt  picture.jpg   webpage.html
 ```
-*We are using the edge tag because of an error, if having problems remove the edge take*
 
-Configure the client to work with our server.
+Let's configure the minio client to work with our server.
 ```
 # USAGE:
 #  mc config host add ALIAS URL ACCESS-KEY SECRET-KEY
-
-mc config host add myminio http://part3_minio_1:9000 minio minio123
 ```
 
-Once the server is added lets upload a test file
+so specifically, we type:
+`/go/src/github.com/minio # mc config host add myminio http://172.144.1.254:9000 minio minio123`
 
-```
-# First create a file
-$ echo "<h1>Test File</h1>" > test.html
+So in this case the `alias` is `myminio`. Once the server is added let's upload our picture.
 
-# Upload
-$ mc cp test.html myminio/mybucket
-```
+`/go/src/github.com/minio # mc cp /files/* myminio/mybucket`
 
-If you refresh your browser you should no see the file we uploaded.
+If you refresh your browser you should now see the files we uploaded! 
+![minio files](assets/miniofiles.png)
 
-To see the default bucket policy which is deny all, navigate to the file in your browser.
+If you click on the `picture.jpg` file and download it, you should see a picture of a dog! 
 
-[http://localhost:9000/mybucket/test.html](http://localhost:9000/mybucket/test.html)
+### Bucket policies
 
-You should see something like the image below
-![Denied Access](assets/denied.png)
+Files are secured by bucket policies.  The default bucket policy is deny all. 
 
-Well thats a problem, lets fix that. This is done by setting bucket policies to allow access. We will keep it simple and just let everyone see it.
+1. To see this Sign out of Minio Browser then go to this URL:
+[http://localhost:9000/mybucket/picture.jpg](http://localhost:9000/mybucket/picture.jpg)
 
-Back on the minio client run:
-```
-$ mc policy public myminio/mybucket
-```
+2. You will see the login page because you do not have rights to the resource. Let's create a public bucket policy. Log back in as `minio` and `minio123`. Click on the three vertical dots next to `mybucket` and select `Edit Policy` 
+![Edit Policy](assets/editpolicy.png)
 
-This sets allow public access, so you can now go to the file in the browser, and you should see **Test File**
+3. Add the prefix `*.jpg` for all JPEG files in the bucket, and select `Read Only` then click `Add` This will make any files in the bucket read only.  Close The Bucket Policy when you are finished.
+![bucket Policy](assets/bucketpolicy.png)
 
-[http://localhost:9000/mybucket/test.html](http://localhost:9000/mybucket/test.html)
+4. Log out of the Minio Browser and once again go to this URL:
+[http://localhost:9000/mybucket/picture.jpg](http://localhost:9000/mybucket/picture.jpg)
 
-This is just a very simple example of how a bucket policy works. The real s3 has more advanced policy, but his is just a quick introduction to how storage works in the "cloud".
+You are now able to download this file without logging in!
+
+5. Now try this URL:
+[http://localhost:9000/mybucket/document.txt](http://localhost:9000/mybucket/document.txt)
+
+You are unable to download this file because the bucket policy only ensures. `*.jpg` files can be read!
+
+This is just a very simple example of how a bucket policy works. The real Amazon S3 has more advanced policy, but this is just a quick introduction to how object storage works in the cloud.
+
+### Tear-down
+
+1. Exit the minio client:   
+`/go/src/github.com/minio # exit`
+2. Bring down the minio server:
+`PS ist346-labs\lab-H\part3> docker-compose down`
+
+## Questions
+
+1. What is SMB? How does it relate to Samba?
+2. What is the command to mount the Samba share `//web/home` to the linux folder `/mnt/webhome` ?
+3. If you want to share a folder through Samba, which file must you edit?
+4. Besides the web interface to LDAP (Hint: there's one for Samba, too). 
+What are the advantages of Samba + LDAP as opposed to simply using Samba?
+5. In part 2, why did we have to restart the `smbserver` after we confgiured the LDAP server?
+6. Why is it impractical for a company to use  Samba to share files in the cloud with their customers?
+7. Explain how an S3 bucket policy works
+8. If you need to share files with a co-worker, which of the 3 approaches covered in this lab would be used and why?
