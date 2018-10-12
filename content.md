@@ -174,3 +174,84 @@ To-Do List
 Class Materials
 
 - None
+
+# 13
+## Storage and File Systems
+
+To-Do List
+
+- Read:	TPOSANA Ch 43
+- Read: [Storage and File Systems](content/reading-13-storage-file-systems-services.pdf)
+
+Class Materials
+
+- [Slides](content/13-storage-and-file-systems.pptx)
+
+# 14 
+# Data and Database Management
+
+To-Do List
+
+- Read:	TPOSANA Ch 44
+- Read: [Data, Database Manaagement and Backups](content/reading-14-data-and-database-management.pdf)
+- Homework: [Lab H - Storage and Networked File Systems](labs/H.md)
+
+Class Materials
+
+- [Slides](content/14-data-and-database-management.pptx)
+
+# 15
+## Cloud Computing and Devops
+
+To-Do List
+
+- Read:	TPOSANA Ch 20
+- Homework: [Lab I - Devops and Cloud Computing](labs/I.md)
+
+Class Materials
+
+- Slides
+
+# 16
+## Debugging / Troubleshooting
+
+To-Do List
+
+- Read:	TPOSANA Ch 29, 30 
+
+Class Materials
+
+- None
+
+# 17 
+## Information Security / Risk Management
+
+To-Do List
+
+- Read:	TPOSANA Ch 22
+
+Class Materials
+
+- Slides
+
+# 18
+## AIP: Email and Messaging
+
+To-Do List
+
+- Read:	TPOSANA Ch 41
+
+Class Materials
+
+- Slides
+
+# Exam 3
+
+To-Do List
+
+- Study for Exam 3 (Covers Topics 07-11)
+
+Class Materials
+
+- None
+
