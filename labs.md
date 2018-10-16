@@ -8,3 +8,4 @@
 - [F - Services and Applications Architectures](labs/F.md)
 - [G - Scalability](labs/G.md)
 - [H - Storage and Network File Systems](labs/H.md)
+- [I - Cloud Computing](labs/I.md)

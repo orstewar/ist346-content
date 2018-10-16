@@ -23,7 +23,6 @@ In this lab you will learn about networked storage and file systems by exploring
 `PS ist346-labs> cd lab-H`
 
 
-
 ## Part 1: SMB and PAM
 
 In this first part we setup a simple SMB (Server Message Block) server using Samba. Samba allows us to share files on one system and make them accessible to another over a network. We will control access to the  files though Samba users and Linux PAM (Pluggable authenitcation modules).

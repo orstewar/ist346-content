@@ -119,8 +119,8 @@ Please consult Blackboard for Reading list, Labs, and Homework which is due each
 | 5 | 9/24 | **EXAM 1 (Covers topics 01-06)** | 9/26 | [08 – Servers and Data Centers](../content.md#08) |
 | 6 | 10/1 | [09 – Services: Application Architectures](../content.md#09) | 10/3 | [10 – Services: Monitoring and Logging](../content.md#10) |
 | 7 | 10/8 | [11 – Services: Scalability](../content.md#11) | 10/10 | [12 – Namespaces, Identity Management](../content.md#12) |
-| 8 | 10/15 | **EXAM 2 (Covers topics 07-11)** | 10/17 | 13 – Storage and File Systems |
-| 9 | 10/22 | 14 – Data and Database Management | 10/24 | 15 – Cloud Computing / DevOps |
+| 8 | 10/15 | **EXAM 2 (Covers topics 07-11)** | 10/17 | [13 – Storage and File Systems](../content.md#13) |
+| 9 | 10/22 | [14 – Data and Database Management](../content.md#14) | 10/24 | 15 – Cloud Computing / DevOps |
 | 10 | 10/29 | 16 – Debugging / Troubleshooting | 10/31 | 17 – Information Security |
 | 11 | 11/5 | 18 – AIP: Email and Messaging   | 11/7 | **EXAM 3 (Covers topics 12-17)** |
 | 12 | 11/12 | 19 – AIP: Web and APIs | 11/14 | 20 – AIP: Mobile Services |
