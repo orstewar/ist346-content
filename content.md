@@ -206,18 +206,19 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 20
+- Read: [Cloud Computing and DevOps](content/reading-15-cloud-and-devops.pdf)
 - Homework: [Lab I - Devops and Cloud Computing](labs/I.md)
 
 Class Materials
 
-- Slides
+- [Slides](content/15-cloud-and-devops.pptx)
 
 # 16
 ## Debugging / Troubleshooting
 
 To-Do List
 
-- Read:	TPOSANA Ch 29, 30 
+- Read:	TPOSANA Ch 29, 30
 
 Class Materials
 
