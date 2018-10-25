@@ -219,10 +219,11 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 29, 30
+- Read: [Debugging and Troubleshooting](content/reading-16-debugging-troubleshooting.pdf)
 
 Class Materials
 
-- None
+- [Slides](content/16-debugging-troubleshooting.pptx)
 
 # 17 
 ## Information Security / Risk Management
@@ -230,10 +231,12 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 22
+- Read: [Information Security and Risk Management](content/reading-17-information-security-risk-management.pdf)
+- Homework: [Lab J - Information Securtity](labs/J.md)
 
 Class Materials
 
-- Slides
+- [Slides](content/reading-17-information-security-risk-management.pdf)
 
 # 18
 ## AIP: Email and Messaging
@@ -250,9 +253,70 @@ Class Materials
 
 To-Do List
 
-- Study for Exam 3 (Covers Topics 07-11)
+- Study for Exam 3 (Covers Topics 12-17)
 
 Class Materials
 
 - None
 
+# 19
+## API: Web and API's
+
+To-Do List
+
+- Read:	TPOSANA Ch 46
+
+Class Materials
+
+- None
+
+# 20
+## AIP: Mobile Services
+
+To-Do List
+
+- Read:	TBA
+
+Class Materials
+
+- None
+
+# 21 
+## AIP: Internet of Things
+
+To-Do List
+
+- Read:	TBA
+
+Class Materials
+
+- None
+# 22
+## Information Ethics
+
+To-Do List
+
+- Read:	TPOSANA Ch 47
+
+Class Materials
+
+- None
+# Group Project Presentations
+
+To-Do List
+
+- Prepare your report and presentation, as per syllabus
+
+Class Materials
+
+- None
+
+# Exam 4
+
+To-Do List
+
+- Study for Exam 6 (Covers Topics 18-22)
+
+Class Materials
+
+- None

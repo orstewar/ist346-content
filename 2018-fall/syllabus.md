@@ -121,7 +121,7 @@ Please consult Blackboard for Reading list, Labs, and Homework which is due each
 | 7 | 10/8 | [11 – Services: Scalability](../content.md#11) | 10/10 | [12 – Namespaces, Identity Management](../content.md#12) |
 | 8 | 10/15 | **EXAM 2 (Covers topics 07-11)** | 10/17 | [13 – Storage and File Systems](../content.md#13) |
 | 9 | 10/22 | [14 – Data and Database Management](../content.md#14) | 10/24 | [15 – Cloud Computing / DevOps](../content.md#15) |
-| 10 | 10/29 | 16 – Debugging / Troubleshooting | 10/31 | 17 – Information Security |
+| 10 | 10/29 | [16 – Debugging / Troubleshooting](../content.md#16) | 10/31 | [17 – Information Security](../content.md#17) |
 | 11 | 11/5 | 18 – AIP: Email and Messaging   | 11/7 | **EXAM 3 (Covers topics 12-17)** |
 | 12 | 11/12 | 19 – AIP: Web and APIs | 11/14 | 20 – AIP: Mobile Services |
 | 13 | 11/19 | _No Classes – Thanksgiving Break_ | 11/21 | _No Classes – Thanksgiving Break_ |

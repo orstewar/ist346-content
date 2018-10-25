@@ -9,7 +9,7 @@
 - [G - Scalability](labs/G.md)
 - [H - Storage and Network File Systems](labs/H.md)
 - [I - Cloud Computing](labs/I.md)
-- J - Information Security
+- [J - Information Security](labs/J.md)
 - K - Email and Messaging Services
 - L - Web and API Services
 - M - Internet of Things
