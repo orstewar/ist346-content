@@ -236,7 +236,7 @@ To-Do List
 
 Class Materials
 
-- [Slides](content/reading-17-information-security-risk-management.pdf)
+- [Slides](content/17-information-security-risk-management.pptx)
 
 # 18
 ## AIP: Email and Messaging
