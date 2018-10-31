@@ -244,10 +244,12 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 41
+- Read: [Email and Messaging Services](content/reading-18-email-messaging.pdf)
+- Homework: [Lab K - Email](labs/K.md)
 
 Class Materials
 
-- Slides
+- [Slides](content/18-email-messaging.pptx)
 
 # Exam 3
 

@@ -10,6 +10,6 @@
 - [H - Storage and Network File Systems](labs/H.md)
 - [I - Cloud Computing](labs/I.md)
 - [J - Information Security](labs/J.md)
-- K - Email and Messaging Services
+- [K - Email and Messaging Services](labs/K.md)
 - L - Web and API Services
 - M - Internet of Things
