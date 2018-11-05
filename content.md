@@ -158,6 +158,7 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 39, 40
+- Read: [Namespaces and Identity Management](content/reading-12-namespaces-identity-management.pdf)
 - Watch: Identity and Access Management: [https://www.youtube.com/watch?v=7wAF2m88a8s](https://www.youtube.com/watch?v=7wAF2m88a8s)
 - Watch: OAuth and OpenIDConnect: [https://www.lynda.com/Security-tutorials/OAUTH-OpenID-Connect/601807/666981-4.html?org=syracuse.edu](https://www.lynda.com/Security-tutorials/OAUTH-OpenID-Connect/601807/666981-4.html?org=syracuse.edu)
 
