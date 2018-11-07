@@ -14,7 +14,6 @@ We will build out the back-tiers in an open-source, content-as-a-service platfor
 +----------------+              +----------+     +---------+
 ```
 
-
 Building a mobile application is beyond the scope of this lab, so instead we will simply use the `curl` command to connect to the web API we create.
 
 ## Learning Objectives

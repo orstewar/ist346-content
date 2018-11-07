@@ -1,4 +1,4 @@
-# Lab K Email and Messaging
+# Lab K - Email and Messaging
 
 Setting up an email server takes a considerable amount of time and requires intricate knowledge of the many services necessary to download and save email, send email, and provide a user interface for users to interact with their messages. All of these services require knowledge of security best practices. For our example we will be using a prebuilt docker container that has all of these services setup for us.
 

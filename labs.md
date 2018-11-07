@@ -12,4 +12,4 @@
 - [J - Information Security](labs/J.md)
 - [K - Email and Messaging Services](labs/K.md)
 - [L - Web and API Services](labs/L.md)
-- M - Internet of Things
+- [M - Internet of Things](labs/M.md)

@@ -268,6 +268,7 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 46
+- Homework: [Lab L - Web and API's](labs/L.md)
 
 Class Materials
 
@@ -290,6 +291,7 @@ Class Materials
 To-Do List
 
 - Read:	TBA
+- Homework: [Lab M - Internet of Things](labs/M.md)
 
 Class Materials
 
