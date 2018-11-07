@@ -11,5 +11,5 @@
 - [I - Cloud Computing](labs/I.md)
 - [J - Information Security](labs/J.md)
 - [K - Email and Messaging Services](labs/K.md)
-- L - Web and API Services
+- [L - Web and API Services](labs/L.md)
 - M - Internet of Things
