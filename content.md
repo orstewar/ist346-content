@@ -268,11 +268,12 @@ Class Materials
 To-Do List
 
 - Read:	TPOSANA Ch 46
+- Read: [Web and APIs](content/reading-19-web-and-apis.pdf)
 - Homework: [Lab L - Web and API's](labs/L.md)
 
 Class Materials
 
-- None
+- [Slides](content/19-web-and-apis.pptx)
 
 # 20
 ## AIP: Mobile Services
