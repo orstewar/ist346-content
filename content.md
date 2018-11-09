@@ -240,7 +240,7 @@ Class Materials
 - [Slides](content/17-information-security-risk-management.pptx)
 
 # 18
-## AIP: Email and Messaging
+## Email and Messaging
 
 To-Do List
 
@@ -263,7 +263,7 @@ Class Materials
 - None
 
 # 19
-## API: Web and API's
+## Web and API's
 
 To-Do List
 
@@ -276,37 +276,41 @@ Class Materials
 - [Slides](content/19-web-and-apis.pptx)
 
 # 20
-## AIP: Mobile Services
+## Mobile Services
 
 To-Do List
 
-- Read:	TBA
+- Read: [Mobile Services](content/reading-20-mobile-services.pdf)
 
 Class Materials
 
-- None
+- [Slides](content/20-mobile-services.pptx)
 
 # 21 
-## AIP: Internet of Things
+## Internet of Things
 
 To-Do List
 
-- Read:	TBA
+- Watch: [IoT Foundations: Fundamentals](https://www.lynda.com/Software-Development-tutorials/IoT-Foundations-Fundamentals/588040-2.html?org=syracuse.edu)
+- Read: [Internet of Things](content/reading-21-internet-of-things.pdf)
 - Homework: [Lab M - Internet of Things](labs/M.md)
 
 Class Materials
 
-- None
+- [Slides](content/21-internet-of-things.pptx)
+
 # 22
 ## Information Ethics
 
 To-Do List
 
 - Read:	TPOSANA Ch 47
+- Read: [Ethics](content/reading-22-ethics.pdf)
 
 Class Materials
 
-- None
+- [Slides](content/22-ethics.pptx)
+
 # Group Project Presentations
 
 To-Do List

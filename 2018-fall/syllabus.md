@@ -123,7 +123,7 @@ Please consult Blackboard for Reading list, Labs, and Homework which is due each
 | 9 | 10/22 | [14 – Data and Database Management](../content.md#14) | 10/24 | [15 – Cloud Computing / DevOps](../content.md#15) |
 | 10 | 10/29 | [16 – Debugging / Troubleshooting](../content.md#16) | 10/31 | [17 – Information Security](../content.md#17) |
 | 11 | 11/5 | [18 – Email and Messaging](../content.md#18)  | 11/7 | **EXAM 3 (Covers topics 12-17)** |
-| 12 | 11/12 | [19 – Web and APIs](../content.md#19) | 11/14 | 20 – Mobile Services |
+| 12 | 11/12 | [19 – Web and APIs](../content.md#19) | 11/14 | [20 – Mobile Services](../content.md#20) |
 | 13 | 11/19 | _No Classes – Thanksgiving Break_ | 11/21 | _No Classes – Thanksgiving Break_ |
-| 14 | 11/26 | 21 – Internet of Things | 11/28 | 22 – Information Ethics |
+| 14 | 11/26 | [21 – Internet of Things](../content.md#21) | 11/28 | [22 – Information Ethics](../content.md#22) |
 | 15 | 12/3 | **Group Project Presentations** | 12/5 | **EXAM 4 (Covers all topics in course)** |
