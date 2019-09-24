@@ -49,7 +49,7 @@ All Syracuse University students have accounts on Lynda.com, a leading technolog
 
 1. Nagivate your web browser to https://lynda.syr.edu 
 2. This will prompt you with a Syracuse University login screen. Login with your Syracuse University **NetID** and **Password**. 
-3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu](https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu) 
+3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.linkedin.com/learning/learning-linux-command-line-2/learning-linux-command-line?org=syracuse.edu](https://www.linkedin.com/learning/learning-linux-command-line-2/learning-linux-command-line?org=syracuse.edu) 
 
 The entire course is about 2 hours long. We will only complete parts 2, 3 and 4 which should take you about 90 minutes. 
 
@@ -60,7 +60,7 @@ NOTE: You'll probably want to use a pair of headphones so you can listen to the 
 ## Learning the Linux Command Line ##  
 
 You should follow along with the Lynda.com video 
-[https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu](https://www.lynda.com/IT-tutorials/Learning-Linux-Command-Line/753913-2.html?org=syracuse.edu)
+[https://www.linkedin.com/learning/learning-linux-command-line-2/what-is-the-command-line?org=syracuse.edu](https://www.linkedin.com/learning/learning-linux-command-line-2/what-is-the-command-line?org=syracuse.edu)
  starting for these chapters:
 
 - **2. Command-Line Basics** -- The Full Chapter (approx. 15 minutes of video

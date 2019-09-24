@@ -37,7 +37,7 @@ CREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Name
 
 1. Navigate your web browser to https://lynda.syr.edu 
 2. This will prompt you with a Syracuse University login screen. Login with your Syracuse University **NetID** and **Password**. 
-3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu) 
+3. Once your are logged on you will see the Lynda.com home page. You can jump directly to the course here: [https://www.linkedin.com/learning/learning-docker-2/why-create-containers-using-docker?org=syracuse.edu](https://www.linkedin.com/learning/learning-docker-2/why-create-containers-using-docker?org=syracuse.edu) 
 
 The entire course is about 3 hours long. We will only complete part 2 which should take you about 60 minutes.
 
@@ -50,14 +50,14 @@ NOTE: You'll probably want to use a pair of headphones so you can listen to the 
 ### What is Docker? ###
 
 Start by watching the following video: What is docker?
-[https://www.lynda.com/Docker-tutorials/What-Docker/721901/779036-4.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/What-Docker/721901/779036-4.html?org=syracuse.edu) 
+[https://www.linkedin.com/learning/learning-docker-2/what-is-docker?org=syracuse.edu](https://www.linkedin.com/learning/learning-docker-2/what-is-docker?org=syracuse.edu) 
 
 ## Docker Commands ##
 
 Follow along with the Lynda.com video for this chapter:
 
 - **2. Using Docker** -- Full Chapter (Approx 55 minutes) from here:     
-[https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu](https://www.lynda.com/Docker-tutorials/Learning-Docker/485649-2.html?org=syracuse.edu)
+[https://www.linkedin.com/learning/learning-docker-2/the-docker-flow-images-to-containers?org=syracuse.edu](https://www.linkedin.com/learning/learning-docker-2/the-docker-flow-images-to-containers?org=syracuse.edu)
 
 Important Tips: 
 
