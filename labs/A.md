@@ -148,10 +148,18 @@ Practice these steps. You will be doing these often in future labs.
 ## Questions 
 
 1. What is a virtual machine? What is a container? How are they different?
+    A virtual machine is a virtual computer running on top of a physical computer. A container is a virtual machine with larger storage capacity. It is more efficient with resources, containers also do not depend on each other.
 2. What is a command line interface? Command Prompt?
+    A command line interface is a text based interface for your computer and a command prompt helps you figure out where you are.
 1. Typically how many times to you need to clone a git repository?
-2. What command to your type to update the contents of your git repository?
+    once 
+2. What command do you type to update the contents of your git repository?
+    'get pull origin master' on command prompt ist346-labs
 3. What is the command to change the working directory to the git repository?
+    type cd lab-*N* where N represents the lab you want to access
 5. What command do you type to bring up the environment for the lab?
+    docker-compose up -d
 6. What command do you type to shut down the environment for a lab?
+    docker-compose down
 7. Why is it important to tear down the lab environment when you are done?
+    You do it to free up resources because if you keep it running it will slow down and there is only a limited number of resources on the host.
